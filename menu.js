@@ -1,62 +1,57 @@
-var option = document.querySelectorAll('.option');
-var frame = document.querySelector('.frame');
-var slideColor = document.querySelector('.slide-color');
-
-option[0].addEventListener('click', slide1);
-option[1].addEventListener('click', slide2);
-option[2].addEventListener('click', slide3);
-option[3].addEventListener('click', slide4);
+const options = document.querySelectorAll('.option');
+const frame = document.querySelector('.frame');
+const slideColor = document.querySelector('.slide-color');
 
 
 
+options.forEach(function (option){
+    option.addEventListener('click', function(e){
+        if(e.target === options[0]){
+            frame.style.transform = 'translateX(0%)';
+            options[1].style.color = 'black';
+            options[2].style.color = 'black';
+            options[3].style.color = 'black';
+        
+            slideColor.style.left = '0';
+            slideColor.style.background = '#640000';
+        }
 
+        else if(e.target === options[1]){
+            frame.style.transform = 'translateX(-100%)';
 
-function slide1(e){
-    frame.style.transform = 'translateX(0%)';
+            options[1].style.color = '#00641F';
+            options[0].style.color = 'black';
+            options[2].style.color = 'black';
+            options[3].style.color = 'black';
 
-    option[1].style.color = 'black';
-    option[2].style.color = 'black';
-    option[3].style.color = 'black';
+            slideColor.style.left = '25%';
+            slideColor.style.background = '#00641F';
+            
+            
+        }
+        else if(e.target === options[2]){
+            frame.style.transform = 'translateX(-200%)';
 
-    slideColor.style.left = '0';
-    slideColor.style.background = '#640000';
-    
-}
+            options[2].style.color = '#B90000';
+            options[0].style.color = 'black';
+            options[1].style.color = 'black';
+            options[3].style.color = 'black';
 
-function slide2(e){
-    frame.style.transform = 'translateX(-100%)';
-    option[1].style.color = '#00641F';
+            slideColor.style.left = '50%';
+            slideColor.style.background = '#B90000';
+        }
+        else if(e.target === options[3]){
+            frame.style.transform = 'translateX(-300%)';
 
-    option[0].style.color = 'black';
-    option[2].style.color = 'black';
-    option[3].style.color = 'black';
-
-    slideColor.style.left = '25%';
-    slideColor.style.background = '#00641F';
-}
-
-function slide3(e){
-    frame.style.transform = 'translateX(-200%)';
-    option[2].style.color = '#B90000';
-
-    option[0].style.color = 'black';
-    option[1].style.color = 'black';
-    option[3].style.color = 'black';
-
-    slideColor.style.left = '50%';
-    slideColor.style.background = '#B90000';
-    
-}
-
-function slide4(e){
-    frame.style.transform = 'translateX(-300%)';
-    option[3].style.color = '#AF2B63'
-
-    option[0].style.color = 'black';
-    option[1].style.color = 'black';
-    option[2].style.color = 'black';
-
-    slideColor.style.left = '75%';
-    slideColor.style.background = '#AF2B63';
-}
+            options[3].style.color = '#AF2B63';
+            options[0].style.color = 'black';
+            options[1].style.color = 'black';
+            options[2].style.color = 'black';
+        
+            slideColor.style.left = '75%';
+            slideColor.style.background = '#AF2B63';
+        }
+        
+    });
+})
 

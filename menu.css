@@ -327,12 +327,14 @@ body{
 .fas.fa-times{
     font-size: 1.2em;
     font-weight: lighter;
-    transform: translateY(-175%);
+    transform: translateY(-195%);
+    cursor: pointer;
 }
 
 /*total section*/
 .total-section{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -341,13 +343,17 @@ body{
 .total-section a{
     border: 1px solid white;
     text-transform: uppercase;
-    padding: 8px 16px;
-    margin-left: 5%;
+    padding: 12px 24px;
     border-radius: 6px;
 }
 
 .total-section i{
     margin-left: 5px;
+}
+
+.total{
+    text-transform: uppercase;
+    margin: 25px 0;
 }
 
 
@@ -419,7 +425,7 @@ body{
     }
 
     .fas.fa-times{
-        transform: translateY(-200%);
+        transform: translateY(-250%);
     }
 
 

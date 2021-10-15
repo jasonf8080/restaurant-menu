@@ -294,8 +294,7 @@ options.forEach(function (option){
 })
 
 
-const decreaseBtns = document.querySelectorAll('.fas.fa-minus');
-console.log(decreaseBtns);
+
 
 
 
@@ -338,16 +337,10 @@ addBtns.forEach(function(addBtn){
        const title = e.target.parentElement.parentElement.children[1].children[0].children[0].textContent;
        const price = e.target.parentElement.parentElement.children[1].children[0].children[1].textContent;
 
-       const itemSelected = {
-           img,
-           title,
-           price,
-       };
-       
 
         const newItem = document.createElement('div');
-    newItem.innerHTML = `<img class="shopping-img" src=${itemSelected.img}>
-    <h3 class="shopping-title">${itemSelected.title}</h3>
+    newItem.innerHTML = `<img class="shopping-img" src=${img}>
+    <h3 class="shopping-title">${title}</h3>
     <div class="quantity-div">
     <span><i class="fas fa-minus"></i></span>
     <span>1</span>
@@ -359,19 +352,29 @@ addBtns.forEach(function(addBtn){
 
     const shoppingContainer = document.querySelector('.shopping-cart-container');
     shoppingContainer.appendChild(newItem);
-    });
 
+    const deleteItemBtns = document.querySelectorAll('.fa-times');
+    deleteItemBtns.forEach(function(deleteItemBtn){
+        deleteItemBtn.addEventListener('click', function(e){
+            const itemInCart = e.target.parentElement;
+            itemInCart.remove();
+        })
+    })
+
+    
 
     
  
 
 
 })
-
+});
  
+/*const itemPrices = document.querySelectorAll('.shopping-price');
+console.log(itemPrices);
 
-
-
+const deleteItemBtn = document.querySelectorAll('fas .fa-times');
+console.log(deleteItemBtn);*/
 
 
 

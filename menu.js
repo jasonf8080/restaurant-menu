@@ -269,108 +269,7 @@ const desc = document.querySelector('.desc');
 
 const menuGrid = document.querySelector('.menu-grid');
 
-window.addEventListener('DOMContentLoaded', function(){
-    menuGrid.innerHTML = `<div class="meal-option">
-    <img class="meal-option-img" src="https://www.dinneratthezoo.com/wp-content/uploads/2019/12/mozzarella-sticks-4-500x500.jpg">
-    <div class="info">
-        <div class="title-price">
-            <h4 class="item-title">Mozzerella Sticks</h4>
-            <p class="price">$16.99</p>
-        </div>
 
-        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
-    </div>
-</div>
-
-<div class="meal-option">
-    <img src="https://images.themodernproper.com/billowy-turkey/production/posts/2019/garlic-bread-10.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1599767628&s=08fa1a2e6dd3daeba5175c6eb9a2d06f"><!--IMG-->
-    <div class="info">
-        <div class="title-price">
-            <h4>Garlic Bread</h4>
-            <p>$16.99</p>
-        </div>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
-    </div>
-</div>
-
-<div class="meal-option">
-    <img src="https://dinnerthendessert.com/wp-content/uploads/2018/08/Buffalo-Wings-4-500x500.jpg"><!--IMG-->
-    <div class="info">
-        <div class="title-price">
-            <h4>Buffalo Wings</h4>
-            <p>$16.99</p>
-        </div>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
-    </div>
-</div>
-
-<div class="meal-option">
-    <img src="https://easyweeknightrecipes.com/wp-content/uploads/2020/07/Bruschetta-9-500x500.jpg"><!--IMG-->
-    <div class="info">
-        <div class="title-price">
-            <h4>Fresh Bruschetta</h4>
-            <p>$16.99</p>
-        </div>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
-    </div>
-</div>
-
-<div class="meal-option">
-    <img src="https://www.spendwithpennies.com/wp-content/uploads/2019/06/Garlic-Grilled-Shrimp-SpendWithPennies-3-500x500.jpg"><!--IMG-->
-    <div class="info">
-        <div class="title-price">
-            <h4>Grilled Shrimp</h4>
-            <p>$16.99</p>
-        </div>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
-    </div>
-</div>
-
-<div class="meal-option">
-    <img src="https://paleogrubs.com/wp-content/uploads/2014/12/parsnipfriesrecipe.jpg"><!--IMG-->
-    <div class="info">
-        <div class="title-price">
-            <h4>Truffle Fries</h4>
-            <p>$16.99</p>
-        </div>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
-    </div>
-</div>
-
-<div class="meal-option">
-    <img src="https://www.dinneratthezoo.com/wp-content/uploads/2019/11/fried-calamari-67-500x500.jpg"><!--IMG-->
-    <div class="info">
-        <div class="title-price">
-            <h4>Fried Calamari</h4>
-            <p>$16.99</p>
-        </div>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
-    </div>
-</div>
-
-<div class="meal-option">
-    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/stuffed-mushrooms-vertical-jpg-1525207616.jpg?crop=1.00xw:0.667xh;0,0.215xh&resize=480:*"><!--IMG-->
-    <div class="info">
-        <div class="title-price">
-            <h4>Stuffed Mushrooms</h4>
-            <p>$16.99</p>
-        </div>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
-    </div>
-</div>
-
-
-
-
-</div><!--Grid End 1-->`
-})
 
 
 options.forEach(function (option){
@@ -393,6 +292,12 @@ options.forEach(function (option){
         //Rn all this does is create the object array and its not putting them together to form the actual
     })
 })
+
+
+const decreaseBtns = document.querySelectorAll('.fas.fa-minus');
+console.log(decreaseBtns);
+
+
 
 
 
@@ -420,62 +325,71 @@ function displayMenuItems(){
 }
 
 
+const addBtns = document.querySelectorAll('.add-btn-container');
 
+addBtns.forEach(function(addBtn){
+    addBtn.addEventListener('click', function(e){
+       const shoppingCartSection = document.querySelector('.shopping-cart');
+       shoppingCartSection.classList.add('visible');
 
-/*const options = document.querySelectorAll('.option');
-const frame = document.querySelector('.frame');
-const slideColor = document.querySelector('.slide-color');
+      
 
+       const img = e.target.parentElement.parentElement.children[0].src;
+       const title = e.target.parentElement.parentElement.children[1].children[0].children[0].textContent;
+       const price = e.target.parentElement.parentElement.children[1].children[0].children[1].textContent;
 
+       const itemSelected = {
+           img,
+           title,
+           price,
+       };
+       
 
-options.forEach(function (option){
-    option.addEventListener('click', function(e){
-        if(e.target === options[0]){
-            frame.style.transform = 'translateX(0%)';
-            options[1].style.color = 'black';
-            options[2].style.color = 'black';
-            options[3].style.color = 'black';
-        
-            slideColor.style.left = '0';
-            slideColor.style.background = '#640000';
-        }
+        const newItem = document.createElement('div');
+    newItem.innerHTML = `<img class="shopping-img" src=${itemSelected.img}>
+    <h3 class="shopping-title">${itemSelected.title}</h3>
+    <div class="quantity-div">
+    <span><i class="fas fa-minus"></i></span>
+    <span>1</span>
+    <span><i class="fas fa-plus"></i></span>
+    </div>
+    <p class="shopping-price">${price}</p>
+    <i class="fas fa-times"></i>`;
+    newItem.classList.add('shopping-item');
 
-        else if(e.target === options[1]){
-            frame.style.transform = 'translateX(-100%)';
-
-            options[1].style.color = '#00641F';
-            options[0].style.color = 'black';
-            options[2].style.color = 'black';
-            options[3].style.color = 'black';
-
-            slideColor.style.left = '25%';
-            slideColor.style.background = '#00641F';
-            
-            
-        }
-        else if(e.target === options[2]){
-            frame.style.transform = 'translateX(-200%)';
-
-            options[2].style.color = '#B90000';
-            options[0].style.color = 'black';
-            options[1].style.color = 'black';
-            options[3].style.color = 'black';
-
-            slideColor.style.left = '50%';
-            slideColor.style.background = '#B90000';
-        }
-        else if(e.target === options[3]){
-            frame.style.transform = 'translateX(-300%)';
-
-            options[3].style.color = '#AF2B63';
-            options[0].style.color = 'black';
-            options[1].style.color = 'black';
-            options[2].style.color = 'black';
-        
-            slideColor.style.left = '75%';
-            slideColor.style.background = '#AF2B63';
-        }
-        
+    const shoppingContainer = document.querySelector('.shopping-cart-container');
+    shoppingContainer.appendChild(newItem);
     });
-})*/
 
+
+    
+ 
+
+
+})
+
+ 
+
+
+
+
+
+
+
+/*function addItemToCart(){
+
+    const newItem = document.createElement('div');
+    newItem.innerHTML = `<img class="shopping-img" src="https://dinnerthendessert.com/wp-content/uploads/2018/08/Buffalo-Wings-4-500x500.jpg">
+    <h3 class="shopping-title">Buffalo Wings</h3>
+    <div class="quantity-div">
+    <span><i class="fas fa-minus"></i></span>
+    <span>1</span>
+    <span><i class="fas fa-plus"></i></span>
+</div>
+<p class="shopping-price">$10.99</p>
+<i class="fas fa-times"></i>`;
+    newItem.classList.add('shopping-item');
+
+    const shoppingContainer = document.querySelector('.shopping-cart-container');
+    shoppingContainer.appendChild(newItem);
+}*/

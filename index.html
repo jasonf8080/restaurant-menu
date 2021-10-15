@@ -6,18 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="menu.css">
+    <script src="https://kit.fontawesome.com/958ff056cf.js" crossorigin="anonymous"></script>
+    
 
 </head>
 <body>
+    <nav class="nav"><!--position: absolute-->
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Reservations</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+
     <div class="whole-container">
 
         <h1 class="title">Our Menu</h1>
 
         <div class="menu-options">
-            <h4 class="option">Appetizers</h4>
-            <h4 class="option">Soups/Salads</h4>
-            <h4 class="option">Entrees</h4>
-            <h4 class="option">Desserts</h4>
+            <h4 class="option" data-id="appetizer">Appetizers</h4>
+            <h4 class="option" data-id="salads">Soups/Salads</h4>
+            <h4 class="option" data-id="entrees">Entrees</h4>
+            <h4 class="option" data-id="desserts">Desserts</h4>
 
             <div class="slide-color"></div>
         </div>
@@ -27,15 +40,16 @@
     <div class="frame"><!--Frame-Screen-->
 
         <div class="menu-grid"><!--Grid 1 Start-->
+            
         <div class="meal-option">
-            <img src="https://www.dinneratthezoo.com/wp-content/uploads/2019/12/mozzarella-sticks-4-500x500.jpg"><!--IMG-->
+            <img class="meal-option-img" src="https://www.dinneratthezoo.com/wp-content/uploads/2019/12/mozzarella-sticks-4-500x500.jpg">
             <div class="info">
                 <div class="title-price">
-                    <h4>Mozzerella Sticks</h4><!--title and info-->
-                    <p>$16.99</p>
+                    <h4 class="item-title">Mozzerella Sticks</h4><!--title and info-->
+                    <p class="price">$16.99</p>
                 </div>
 
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
+                <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.</p>
             </div>
         </div>
 
@@ -444,6 +458,54 @@
 
     </div><!--Frame End (for now)-->
     </div><!--Whole-Slider End (for now)-->
+    </div>
+
+    <section class="shopping-cart">
+        <h1 class="header-title">Review Order</h1>
+
+        <div class="shopping-cart-container">
+            <div class="shopping-item"><!--single item-->
+                <img class="shopping-img" src="https://dinnerthendessert.com/wp-content/uploads/2018/08/Buffalo-Wings-4-500x500.jpg">
+                <h3 class="shopping-title">Buffalo Wings</h3>
+                <div class="quantity-div">
+                    <span><i class="fas fa-minus"></i></span>
+                    <span>1</span>
+                    <span><i class="fas fa-plus"></i></span>
+                </div>
+                <p class="shopping-price">$10.99</p>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="shopping-item"><!--single item-->
+                <img class="shopping-img" src="https://www.jocooks.com/wp-content/uploads/2020/07/skillet-steak-1-7-500x500.jpg">
+                <h3 class="shopping-title">Wood Fired Steak</h3>
+                <div class="quantity-div">
+                    <span><i class="fas fa-minus"></i></span>
+                    <span>1</span>
+                    <span><i class="fas fa-plus"></i></span>
+                </div>
+                <p class="shopping-price">$16.99</p>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="shopping-item"><!--single item-->
+                <img class="shopping-img" src="https://www.alattefood.com/wp-content/uploads/2015/12/Carrot-Spice-Cake-Recipe-10-500x500.jpg">
+                <h3 class="shopping-title">Carrot Cake</h3>
+                <div class="quantity-div">
+                    <span><i class="fas fa-minus"></i></span>
+                    <span>1</span>
+                    <span><i class="fas fa-plus"></i></span>
+                </div>
+                <p class="shopping-price">$7.99</p>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <div class="total-section">
+            <h3>Total: <span>$30.00</span></h3>
+            <a href="#">Proceed to Checkout<i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
 
 
 

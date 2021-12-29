@@ -1,4 +1,4 @@
-const menu = [
+const restaurantMenu = [
     {
         category: 'appetizer',
         image: 'https://www.dinneratthezoo.com/wp-content/uploads/2019/12/mozzarella-sticks-4-500x500.jpg',
@@ -64,6 +64,22 @@ const menu = [
     },
 
     {
+        category: 'appetizer',
+        image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/stuffed-mushrooms-vertical-jpg-1525207616.jpg?crop=1.00xw:0.667xh;0,0.215xh&resize=480:*',
+        title:  'Stuffed Mushrooms',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+    {
+        category: 'appetizer',
+        image: 'https://www.lemontreedwelling.com/wp-content/uploads/2020/10/air-fryer-onion-rings-featured-720x720.jpg',
+        title:  'Onion Rings',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+    {
         category: 'salads',
         image: 'https://www.jessicagavin.com/wp-content/uploads/2019/07/caesar-salad-10-1200.jpg',
         title:  'Caesar Salad',
@@ -121,6 +137,22 @@ const menu = [
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
     
+
+    {
+        category: 'salads',
+        image: 'https://static.fanpage.it/wp-content/uploads/sites/22/2020/11/Creamy-Potato-Soup-13-1200x1200.jpg',
+        title:  'Creamy Potato Soup',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+    {
+        category: 'salads',
+        image: 'https://static.fanpage.it/wp-content/uploads/sites/22/2020/11/Creamy-Potato-Soup-13-1200x1200.jpg',
+        title:  'Creamy Potato Soup',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
 
     {
         category: 'salads',
@@ -195,6 +227,22 @@ const menu = [
     },
 
     {
+        category: 'entrees',
+        image: 'https://neighborfoodblog.com/wp-content/uploads/2019/09/stuffed-pork-tenderloin-4-720x720.jpg',
+        title:  'Pork Tenderloin',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+    {
+        category: 'entrees',
+        image: 'https://neighborfoodblog.com/wp-content/uploads/2019/09/stuffed-pork-tenderloin-4-720x720.jpg',
+        title:  'Pork Tenderloin',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+    {
         category: 'desserts',
         image: 'https://www.theflavorbender.com/wp-content/uploads/2019/01/Molten-Lava-Cake-The-Flavor-Bender-Featured2.jpg',
         title:  'Chocolate Lava Cake',
@@ -256,188 +304,111 @@ const menu = [
         title:  'Almond Bear Claw',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+    {
+        category: 'desserts',
+        image: 'https://lovebakesgoodcakes.com/wp-content/uploads/2020/07/Almond-Bear-Claw-square.jpg',
+        title:  'Almond Bear Claw',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+    {
+        category: 'desserts',
+        image: 'https://lovebakesgoodcakes.com/wp-content/uploads/2020/07/Almond-Bear-Claw-square.jpg',
+        title:  'Almond Bear Claw',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     }
+
+    
 
 ]
 
-const options = document.querySelectorAll('.option');
-
-const mealImage = document.querySelector('.meal-option-img');
-const title = document.querySelector('.item-title');
-const price = document.querySelector('.price');
-const desc = document.querySelector('.desc');
-
 const menuGrid = document.querySelector('.menu-grid');
 
+ 
+const categories = document.querySelectorAll('.option');
 
-
-
-options.forEach(function (option){
-    option.addEventListener('click', function(e){
-
-        const dataSetId = e.target.dataset.id;
-
-        const filterMenuItems = menu.filter(function(menuItem){
-            if(dataSetId === menuItem.category){
-                return menuItem;
+categories.forEach(function(category){
+    category.addEventListener('click', function(e){
+       
+        const categorySlider = document.querySelector('.category-slider');
+        
+        for(let i = 0; i < categories.length; i++){
+            const selectedCategory = categories[i];
+            if(e.target === selectedCategory){
+                let categoryIndex = i;
+                categorySlider.style.transform = `translateX(${categoryIndex}00%)`;
             }
+        }
+
+        
+
+        categories.forEach(function(category){
+            category.style.fontWeight = 'lighter';
+            e.target.style.fontWeight = 'bold';
         })
-     
-
-        
-
-        console.log(filterMenuItems);
-
-        
-        //Rn all this does is create the object array and its not putting them together to form the actual
-    })
-})
 
 
+       //show selected menu items based on category
+       const categoryID = e.target.getAttribute('id');
+       const categoryArray = [];
+       
+       for(let i = 0; i < restaurantMenu.length; i++){
+           let menuItem = restaurantMenu[i];
 
+           if(categoryID === menuItem.category){
+            //console.log(menuItem)
+            categoryArray.push(menuItem);
+           } 
+       }
 
+       console.log(categoryArray);
 
+       let displayCategoryItems = categoryArray.map(function(menuOption){
+           return `<div class="meal-option">
+           <img src="${menuOption.image}">
+           <div class="info">
+               <div class="title-price">
+                   <h4>${menuOption.title}</h4>
+                   <p>${menuOption.price}</p>
+               </div>
+       
+               <p>${menuOption.desc}</p>
+             
+           </div>
+           
+           <div class="bg-color"></div>
+       </div>`;
+       })
 
+       console.log(displayCategoryItems);
+       
+       const menuContent = displayCategoryItems.join("");
+       menuGrid.innerHTML = menuContent;
 
+       const categoryColors = document.querySelectorAll('.bg-color');
 
-  
-
-
-function displayMenuItems(){
-    let displayMenu = menu.map(function(menuItem){
-        return `
-        <div class="meal-option">
-        <img class="meal-option-img" src=${menuItem.image}>
-        <div class="info">
-            <div class="title-price">
-                <h4 class="item-title">${menuItem.title}</h4><!--title and info-->
-                <p class="price">${menuItem.price}</p>
-            </div>
-
-            <p class="desc">${menuItem.desc}</p>
-        </div>
-    </div>`;
-    })
-    console.log(displayMenu);
-    displayMenu = displayMenu.join("");
-    menuGrid.innerHTML = displayMenu;
-}
-
-
-
-
-
-
-const addBtns = document.querySelectorAll('.add-btn-container');
-
-addBtns.forEach(function(addBtn){
-    addBtn.addEventListener('click', function(e){
-        //show cart
-       const shoppingCartSection = document.querySelector('.shopping-cart');
-       shoppingCartSection.classList.add('visible');
-
+       categoryColors.forEach(function(categoryColor){
+           if(e.target === categories[1]){
+               categoryColor.style.background = '#00641F';
+           } 
+           else if(e.target === categories[2]){
+               categoryColor.style.background = '#B90000';
+           } else if(e.target === categories[3]){
+               categoryColor.style.background = '#64005c';
+           } else {
+            categoryColor.style.background = '#640000';
+           }
+       })
       
-
-       const img = e.target.parentElement.parentElement.children[0].src;
-       const title = e.target.parentElement.parentElement.children[1].children[0].children[0].textContent;
-       const price = e.target.parentElement.parentElement.children[1].children[0].children[1].textContent;
-
-        //add new item to cart
-        const newItem = document.createElement('div');
-        newItem.innerHTML = `
-        <img class="shopping-img" src=${img}>
-        <h3 class="shopping-title">${title}</h3>
-        <div class="quantity-div">
-            <span><i class="fas fa-minus"></i></span>
-            <span>1</span>
-            <span><i class="fas fa-plus"></i></span>
-        </div>
-        <p class="shopping-price">${price}</p>
-        <i class="fas fa-times"></i>`;
-    newItem.classList.add('shopping-item');
-
-    const shoppingContainer = document.querySelector('.shopping-cart-container');
-    shoppingContainer.appendChild(newItem);
-
-    //remove item from cart
-    const deleteItemBtns = document.querySelectorAll('.fa-times');
-    deleteItemBtns.forEach(function(deleteItemBtn){
-        deleteItemBtn.addEventListener('click', function(e){
-            const itemInCart = e.target.parentElement;
-            itemInCart.remove();
-
-            //if no items in cart, remove cart from page
-            itemsArray = document.querySelectorAll('.shopping-item');
-            console.log(itemsArray);
-            if(itemsArray.length < 1){
-                shoppingCartSection.classList.remove('visible');
-            }
-        })
+       
+       
     })
-
-
-    //add/remove qty items
-    const increaseQtyBtns = document.querySelectorAll('.shopping-item .fa-plus');
-    const decreaseQtyBtns = document.querySelectorAll('.shopping-item .fa-minus');
-    let quantity = 1;
-    
-    increaseQtyBtns.forEach(function(increaseQtyBtn){
-        increaseQtyBtn.addEventListener('click', function(e){
-            const quantityString = e.target.parentElement.previousElementSibling;
-            //console.log(quantityString);
-          
-            quantity++;
-            quantityString.textContent = quantity;
-
-            if(quantity > 4){
-                quantity = 0;
-            }
-        })
-    })
-
-    decreaseQtyBtns.forEach(function(decreaseQtyBtn){
-        decreaseQtyBtn.addEventListener('click', function(e){
-            const quantityString = e.target.parentElement.nextElementSibling;
-            quantity--;
-            quantityString.textContent = quantity;
-            if(quantity < 1){
-                e.target.parentElement.parentElement.parentElement.remove();
-            }
-        })
-    })
-
-
- 
-
-    
-
-    const totalElement = document.querySelector('.total-price');
-    console.log(totalElement);
-
-    const shoppingItems = document.querySelectorAll('.shopping-item');
-
-
-    shoppingItems.forEach(function(shoppingItem){
-        const itemQty =  parseInt(shoppingItem.children[2].children[1].textContent);
-        const itemPrice = parseInt(shoppingItem.children[3].textContent);
-
-        
-        
-    
-        
-        
-        const individualTotal = itemQty * itemPrice;
-        console.log(individualTotal);
-
-    
-     
-        
-    })
-
-
 })
-});
- 
 
+ 
 
 

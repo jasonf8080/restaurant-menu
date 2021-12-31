@@ -238,7 +238,6 @@ body{
         font-size: 13px;
     }
 
-    
    
 
  
@@ -276,9 +275,12 @@ body{
 
     .menu-grid{
         grid-template-columns: 1fr;
-        transform: translateX(0px);
     }
     
+    .meal-option{
+        max-width: 90%;
+        margin: 0 auto;
+    }
 
     
 }
@@ -286,7 +288,7 @@ body{
 @media(max-width: 590px){
 
     body{
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .menu-options h4{

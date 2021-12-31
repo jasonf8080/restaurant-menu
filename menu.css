@@ -125,16 +125,17 @@ body{
 
 
 .menu-grid{
-    background: rgb(250, 248, 245);
+    background: rgb(255, 251, 244);
     max-width: 95%;
     min-width: 95%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2em;
     row-gap: 1.5em;
-    padding: 1.5em;
+    padding: 0;
     justify-content: center;
-    transform: translateX(12px);
+   padding-left: 12px;
+   
    
    
 }
@@ -151,6 +152,7 @@ body{
     cursor: pointer;
     transition: all 0.5s;
     position: relative;
+   
 }
 
  
@@ -274,6 +276,7 @@ body{
 
     .menu-grid{
         grid-template-columns: 1fr;
+        transform: translateX(0px);
     }
     
 
@@ -306,17 +309,7 @@ body{
 
     
 
-    .shopping-cart{
-        font-size: 9px;
-    }
-
-    .shopping-img{
-        width: 55x;
-    }
-
-    .fas.fa-times{
-        transform: translateY(-250%);
-    }
+   
 
 
     

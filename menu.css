@@ -24,7 +24,7 @@ body{
     position: relative;
     background: url("https://www.designyourway.net/blog/wp-content/uploads/2019/09/Seamless-wood-pattern-01.jpg");
     font-size: 14px;
-    padding: 3.5em 0;
+    padding: 4.25em 0;
 }
 
 
@@ -107,6 +107,7 @@ body{
     position: absolute;
     bottom: -20px;
     left: 0%;
+    transition: all 0.5s;
     /*transform: translateX(200%);*/
 }
 

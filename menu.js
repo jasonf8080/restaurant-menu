@@ -41,8 +41,8 @@ const restaurantMenu = [
 
     {
         category: 'appetizer',
-        image: 'https://paleogrubs.com/wp-content/uploads/2014/12/parsnipfriesrecipe.jpg',
-        title:  'Truffle Fries',
+        image: 'https://spicysouthernkitchen.com/wp-content/uploads/Fried-Jalapeno-Popper-Bites-9.jpg',
+        title:  'Jalepeno Poppers',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
@@ -55,6 +55,7 @@ const restaurantMenu = [
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
 
+
     {
         category: 'appetizer',
         image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/stuffed-mushrooms-vertical-jpg-1525207616.jpg?crop=1.00xw:0.667xh;0,0.215xh&resize=480:*',
@@ -65,11 +66,12 @@ const restaurantMenu = [
 
     {
         category: 'appetizer',
-        image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/stuffed-mushrooms-vertical-jpg-1525207616.jpg?crop=1.00xw:0.667xh;0,0.215xh&resize=480:*',
-        title:  'Stuffed Mushrooms',
+        image: 'https://foodwithfeeling.com/wp-content/uploads/2021/08/truffle-fries-4-225x225.jpg',
+        title:  'Truffle Fries',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
+
 
     {
         category: 'appetizer',
@@ -231,6 +233,23 @@ const restaurantMenu = [
     },
 
     {
+        category: 'entrees',
+        image: 'https://thebusybaker.ca/wp-content/uploads/2021/02/easy-eggplant-parmesan-fb-ig-5-scaled.jpg',
+        title:  'Eggplant Parmesan',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+    {
+        category: 'entrees',
+        image: 'https://www.thecountrycook.net/wp-content/uploads/2020/02/EASY-BAKED-ZITI-thumbnail.jpg',
+        title:  'Baked Ziti',
+        price:  '9.99',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+    },
+
+
+    {
         category: 'desserts',
         image: 'https://www.recipetineats.com/wp-content/uploads/2021/02/Chocolate-Lava-Cake_7-SQ.jpg',
         title:  'Chocolate Lava Cake',
@@ -343,12 +362,7 @@ categories.forEach(function(category){
             }
         }
 
-        
-
-        categories.forEach(function(category){
-            category.style.fontWeight = 'lighter';
-            e.target.style.fontWeight = 'bold';
-        })
+    
 
 
        //show selected menu items based on category

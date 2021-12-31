@@ -146,21 +146,7 @@ const restaurantMenu = [
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
 
-    {
-        category: 'salads',
-        image: 'https://static.fanpage.it/wp-content/uploads/sites/22/2020/11/Creamy-Potato-Soup-13-1200x1200.jpg',
-        title:  'Creamy Potato Soup',
-        price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
-    },
-
-    {
-        category: 'salads',
-        image: 'https://static.fanpage.it/wp-content/uploads/sites/22/2020/11/Creamy-Potato-Soup-13-1200x1200.jpg',
-        title:  'Creamy Potato Soup',
-        price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
-    },
+ 
 
     {
         category: 'entrees',
@@ -220,19 +206,21 @@ const restaurantMenu = [
 
     {
         category: 'entrees',
-        image: 'https://neighborfoodblog.com/wp-content/uploads/2019/09/stuffed-pork-tenderloin-4-720x720.jpg',
-        title:  'Pork Tenderloin',
+        image: 'https://www.verywellfit.com/thmb/zZl_RzLW_D1gpMi-ndGBpX8QM8U=/1414x1414/smart/filters:no_upscale()/chicken-marsala-962194078-04aca06b8b2b48588e40c8b57210c294.jpg',
+        title:  'Chicken Marsala',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
 
     {
         category: 'entrees',
-        image: 'https://neighborfoodblog.com/wp-content/uploads/2019/09/stuffed-pork-tenderloin-4-720x720.jpg',
-        title:  'Pork Tenderloin',
+        image: 'http://cdn.shopify.com/s/files/1/0577/3616/7591/products/chicken-alfredo-8-1200.jpg?v=1625717688',
+        title:  'Chicken Alfredo',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
+
+   
 
     {
         category: 'entrees',
@@ -244,7 +232,7 @@ const restaurantMenu = [
 
     {
         category: 'desserts',
-        image: 'https://www.theflavorbender.com/wp-content/uploads/2019/01/Molten-Lava-Cake-The-Flavor-Bender-Featured2.jpg',
+        image: 'https://www.recipetineats.com/wp-content/uploads/2021/02/Chocolate-Lava-Cake_7-SQ.jpg',
         title:  'Chocolate Lava Cake',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
@@ -260,7 +248,7 @@ const restaurantMenu = [
 
     {
         category: 'desserts',
-        image: 'https://www.recipetineats.com/wp-content/uploads/2018/09/Chocolate-Mousse_9.jpg?w=500&h=500&crop=1',
+        image: 'https://www.culinaryhill.com/wp-content/uploads/2018/09/Easy-Chocolate-Mousse-SQ-03-Culinary-Hill-e1580268096256-500x500.png',
         title:  'Chocolate Mousse',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
@@ -268,23 +256,26 @@ const restaurantMenu = [
 
     {
         category: 'desserts',
-        image: 'https://handletheheat.com/wp-content/uploads/2020/10/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-637x637-1.jpg',
-        title:  'Chewy Chocolate Chip Cookies',
+        image: 'https://www.momontimeout.com/wp-content/uploads/2020/09/stack-of-chewy-chocolate-chip-cookies-on-dark-wood-board-square.jpg',
+        title:  'Chocolate Chip Cookies',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
 
+
     {
         category: 'desserts',
-        image: 'https://www.alattefood.com/wp-content/uploads/2015/12/Carrot-Spice-Cake-Recipe-10-500x500.jpg',
-        title:  'Carrot Cake',
+        image: 'https://www.looneybeanbishop.com/uploads/1/3/1/2/131223678/s807527588167116925_p101_i1_w1920.jpeg',
+        title:  'Almond Bear Claw',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
 
+
+
     {
         category: 'desserts',
-        image: 'https://handletheheat.com/wp-content/uploads/2014/09/How-to-Make-Eclairs-SQUARE.jpg',
+        image: 'https://www.spoonfulofflavor.com/wp-content/uploads/2021/03/Homemade-Eclair-500x500.jpg',
         title:  'Eclairs',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
@@ -300,27 +291,32 @@ const restaurantMenu = [
 
     {
         category: 'desserts',
-        image: 'https://lovebakesgoodcakes.com/wp-content/uploads/2020/07/Almond-Bear-Claw-square.jpg',
-        title:  'Almond Bear Claw',
+        image: 'https://img.buzzfeed.com/video-api-prod/assets/fafe8090b4f3434f80c33b6e4ce40e24/BFV21539_BestFudgyBrownies-ThumbB1080.jpg',
+        title:  'Fudge Brownie',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
 
     {
         category: 'desserts',
-        image: 'https://lovebakesgoodcakes.com/wp-content/uploads/2020/07/Almond-Bear-Claw-square.jpg',
-        title:  'Almond Bear Claw',
+        image: 'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2021-11-Rainbow-Cookies%2Fxtest__rainbow_cookies-2',
+        title:  'Rainbow Cookies',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },
 
     {
         category: 'desserts',
-        image: 'https://lovebakesgoodcakes.com/wp-content/uploads/2020/07/Almond-Bear-Claw-square.jpg',
-        title:  'Almond Bear Claw',
+        image: 'https://carameltintedlife.com/wp-content/uploads/2021/03/Puff-Pastry-Cinnamon-Rolls.jpg',
+        title:  'Cinnamon Roll',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
-    }
+    },
+
+ 
+ 
+
+   
 
     
 
@@ -337,9 +333,12 @@ categories.forEach(function(category){
         const categorySlider = document.querySelector('.category-slider');
         
         for(let i = 0; i < categories.length; i++){
-            const selectedCategory = categories[i];
-            if(e.target === selectedCategory){
+            const selectedCategory = categories[i];//all of the individual indexes
+            console.log(selectedCategory);
+
+            if(e.target === selectedCategory){//if e.target = one of the indexes
                 let categoryIndex = i;
+                console.log(categoryIndex);//console.log(clicked on index)
                 categorySlider.style.transform = `translateX(${categoryIndex}00%)`;
             }
         }
@@ -369,19 +368,19 @@ categories.forEach(function(category){
 
        let displayCategoryItems = categoryArray.map(function(menuOption){
            return `<div class="meal-option">
-           <img src="${menuOption.image}">
-           <div class="info">
-               <div class="title-price">
-                   <h4>${menuOption.title}</h4>
-                   <p>${menuOption.price}</p>
-               </div>
-       
-               <p>${menuOption.desc}</p>
-             
+       <img class="meal-option-img" src="${menuOption.image}">
+       <div class="info">
+           <div class="title-price">
+               <h4 class="item-title">${menuOption.title}</h4><!--title and info-->
+               <p class="desc">${menuOption.desc}</p>
            </div>
-           
-           <div class="bg-color"></div>
-       </div>`;
+
+           <p class="price">${menuOption.price}</p>
+       </div>
+        
+
+       <div class="bg-color"></div>
+   </div>`;
        })
 
        console.log(displayCategoryItems);
@@ -398,7 +397,7 @@ categories.forEach(function(category){
            else if(e.target === categories[2]){
                categoryColor.style.background = '#B90000';
            } else if(e.target === categories[3]){
-               categoryColor.style.background = '#64005c';
+               categoryColor.style.background = 'rgb(111, 0, 121)';
            } else {
             categoryColor.style.background = '#640000';
            }

@@ -126,8 +126,8 @@ body{
 
 .menu-grid{
     background: rgb(255, 251, 244);
-    max-width: 95%;
-    min-width: 95%;
+    max-width: 90%;
+    min-width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2em;
@@ -152,7 +152,6 @@ body{
     cursor: pointer;
     transition: all 0.5s;
     position: relative;
-   
 }
 
  
@@ -231,7 +230,7 @@ body{
     
 
     body{
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .menu-options h4{
@@ -275,6 +274,8 @@ body{
 
     .menu-grid{
         grid-template-columns: 1fr;
+        max-width: 95%;
+        min-width: 95%;
     }
     
     .meal-option{

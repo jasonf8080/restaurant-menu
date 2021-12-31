@@ -131,7 +131,7 @@ const restaurantMenu = [
 
     {
         category: 'salads',
-        image: 'https://assets.bonappetit.com/photos/5c634f0d050c433e0a336d6a/1:1/w_2560%2Cc_limit/healthyish-french-onion-horizontal.jpg',
+        image: 'https://s23209.pcdn.co/wp-content/uploads/2019/06/One-Pot-French-Onion-SoupIMG_9418-360x360.jpg',
         title:  'French Onion Soup',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
@@ -140,8 +140,8 @@ const restaurantMenu = [
 
     {
         category: 'salads',
-        image: 'https://static.fanpage.it/wp-content/uploads/sites/22/2020/11/Creamy-Potato-Soup-13-1200x1200.jpg',
-        title:  'Creamy Potato Soup',
+        image: 'https://realhousemoms.com/wp-content/uploads/Crockpot-Chicken-Tortellini-Soup-IG.jpg',
+        title:  'Tortellini Soup',
         price:  '9.99',
         desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
     },

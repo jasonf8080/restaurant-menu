@@ -298,10 +298,10 @@ body{
     }
 
     .meal-option img{
-        width: 80px;
+        width: 85px;
         height: auto;
-        min-height: 80px;
-        max-height: 80px;
+        min-height: 85px;
+        max-height: 85px;
     }
 
    

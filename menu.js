@@ -343,6 +343,38 @@ const restaurantMenu = [
 
 const menuGrid = document.querySelector('.menu-grid');
 
+window.addEventListener('DOMContentLoaded', function(){
+    const appetizers = [];
+    for(let i = 0; i < restaurantMenu.length; i++){
+        if(restaurantMenu[i].category === 'appetizer'){
+            appetizers.push(restaurantMenu[i]);
+
+        }
+    }
+    
+    const appetizersContent = appetizers.map(appetizer => `
+    <div class="meal-option">
+        <img class="meal-option-img" src="${appetizer.image}">
+        <div class="info">
+            <div class="title-price">
+                    <h4 class="item-title">${appetizer.title}</h4>
+                    <p class="desc">${appetizer.desc}</p>
+            </div>
+
+        <p class="price">${appetizer.price}</p>
+        </div>
+     
+
+        <div class="bg-color"></div>
+    </div>
+    `).join('');
+
+    menuGrid.innerHTML = appetizersContent;
+    
+})  
+
+
+
  
 const categories = document.querySelectorAll('.option');
 

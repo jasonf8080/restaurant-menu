@@ -86,7 +86,7 @@ const restaurantMenu = [
         image: 'https://www.jessicagavin.com/wp-content/uploads/2019/07/caesar-salad-10-1200.jpg',
         title:  'Caesar Salad',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.'
+        desc:   'Romaine lettuce tossed with a creamy caesar dressing and grated cheese, topped with croutons'
         ,
     },
 
@@ -95,7 +95,7 @@ const restaurantMenu = [
         image: 'https://images.themodernproper.com/billowy-turkey/production/posts/2019/Easy-italian-salad-recipe-10.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1614096227&s=c0f63a30cef3334d97f9ecad14be51da',
         title:  'Italian Salad',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Salad with romaine lettuce, croutons, tomatoes, pepperoncini, parmesan, topped with Italian dressing',
     },
 
     {
@@ -103,7 +103,7 @@ const restaurantMenu = [
         image: 'https://cravingtasty.com/wp-content/uploads/2019/02/Grilled-Chicken-Salad-Horizontal-500x500.jpg',
         title:  'Grilled Chicken Salad',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Tender marinated chicken served over lettuce with bacon, avocado, corn, blue cheese and tomatoes',
     },
 
 
@@ -112,7 +112,7 @@ const restaurantMenu = [
         image: 'https://www.spoonfulofflavor.com/wp-content/uploads/2020/03/garden-salad-recipe-500x500.jpg',
         title:  'Fresh Garden Salad',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Tossed green salad made with carrots, tomatoes, cucumbers and onions',
     },
 
     {
@@ -120,7 +120,7 @@ const restaurantMenu = [
         image: 'https://www.daringgourmet.com/wp-content/uploads/2020/10/Minestrone-12.jpg',
         title:  'Minestrone Soup',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Italian vegetable soup filled with pasta, beans, tomatoes, and veggies, seasoned with Italian herbs.',
     },
 
     {
@@ -128,7 +128,7 @@ const restaurantMenu = [
         image: 'https://www.willcookforsmiles.com/wp-content/uploads/2020/01/pasta-e-fagioli-8-1-500x500.jpg',
         title:  'Pasta Fagoli',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Italian style soup with tender pasta, creamy beans, and delicious herbs in a rich and savory broth.',
     },
 
 
@@ -137,7 +137,7 @@ const restaurantMenu = [
         image: 'https://s23209.pcdn.co/wp-content/uploads/2019/06/One-Pot-French-Onion-SoupIMG_9418-360x360.jpg',
         title:  'French Onion Soup',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'French style soup prepared with beef stock, caramelized onions, topped with cheesy bread',
     },
     
 
@@ -146,7 +146,7 @@ const restaurantMenu = [
         image: 'https://realhousemoms.com/wp-content/uploads/Crockpot-Chicken-Tortellini-Soup-IG.jpg',
         title:  'Tortellini Soup',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Creamy soup with rich cheese tortellini, ground beef, tomatoes and vegetables, and flavorful herbs.',
     },
 
  
@@ -156,7 +156,7 @@ const restaurantMenu = [
         image: 'https://images.themodernproper.com/billowy-turkey/production/posts/2021/Chicken-Parmesan-14.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1618755606&s=cb9a4e64a5cd5948c2156f53ca5312ed',
         title:  'Chicken Parmagiana',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   '',
     },
 
     {

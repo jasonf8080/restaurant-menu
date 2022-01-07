@@ -4,7 +4,7 @@ const restaurantMenu = [
         image: 'https://www.dinneratthezoo.com/wp-content/uploads/2019/12/mozzarella-sticks-4-500x500.jpg',
         title:  'Mozzerella Sticks',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Sticks of mozzarella cheese that are coated in seasoned Italian breadcrumbs, then deep fried until golden brown',
     },
 
     {
@@ -12,7 +12,7 @@ const restaurantMenu = [
         image: 'https://images.themodernproper.com/billowy-turkey/production/posts/2019/garlic-bread-10.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1599767628&s=08fa1a2e6dd3daeba5175c6eb9a2d06f',
         title:  'Garlic Bread',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Toasty, buttery, herby, covered in a dusting of salty parmesan cheese, piping hot and fresh out of the oven',
     },
 
     {
@@ -20,7 +20,7 @@ const restaurantMenu = [
         image: 'https://dinnerthendessert.com/wp-content/uploads/2018/08/Buffalo-Wings-4-500x500.jpg',
         title:  'Buffalo Wings',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Chicken wings coated with a vinegar-and-cayenne-pepper hot sauce mixed with butter. ',
     },
 
     {
@@ -28,7 +28,7 @@ const restaurantMenu = [
         image: 'https://easyweeknightrecipes.com/wp-content/uploads/2020/07/Bruschetta-9-500x500.jpg',
         title:  'Fresh Bruschetta',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Grilled bread rubbed with garlic and topped with olive oil, salt, tomatoes, and balsalmic vinegar.',
     },
 
     {
@@ -36,7 +36,7 @@ const restaurantMenu = [
         image: 'https://www.spendwithpennies.com/wp-content/uploads/2019/06/Garlic-Grilled-Shrimp-SpendWithPennies-3-500x500.jpg',
         title:  'Grilled Shrimp',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Shrimp grilled combined with olive oil, red wine vinegar, garlic, Italian seasoning, salt, and pepper',
     },
 
     {
@@ -44,7 +44,7 @@ const restaurantMenu = [
         image: 'https://spicysouthernkitchen.com/wp-content/uploads/Fried-Jalapeno-Popper-Bites-9.jpg',
         title:  'Jalepeno Poppers',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Spicy jalapeños and cheese fried in a golden brown shell',
     },
 
     {
@@ -52,7 +52,7 @@ const restaurantMenu = [
         image: 'https://www.dinneratthezoo.com/wp-content/uploads/2019/11/fried-calamari-67-500x500.jpg',
         title:  'Fried Calamari',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Tender pieces of squid soaked in buttermilk, then coated in seasoned flour and deep fried to golden brown',
     },
 
 
@@ -61,7 +61,7 @@ const restaurantMenu = [
         image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/stuffed-mushrooms-vertical-jpg-1525207616.jpg?crop=1.00xw:0.667xh;0,0.215xh&resize=480:*',
         title:  'Stuffed Mushrooms',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Mushrooms stuffed with shallots, garlic, walnuts, breadcrumbs, and chopped mushroom stems.',
     },
 
     {
@@ -69,7 +69,7 @@ const restaurantMenu = [
         image: 'https://foodwithfeeling.com/wp-content/uploads/2021/08/truffle-fries-4-225x225.jpg',
         title:  'Truffle Fries',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Thin cut deep-fried potatoes topped with truffle oil, fresh herbs and spices, garlic, and cheese,',
     },
 
 
@@ -78,7 +78,7 @@ const restaurantMenu = [
         image: 'https://www.lemontreedwelling.com/wp-content/uploads/2020/10/air-fryer-onion-rings-featured-720x720.jpg',
         title:  'Onion Rings',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Large white onions sliced into rings, dipped in a batter and bread crumbs then deep fried',
     },
 
     {
@@ -86,7 +86,8 @@ const restaurantMenu = [
         image: 'https://www.jessicagavin.com/wp-content/uploads/2019/07/caesar-salad-10-1200.jpg',
         title:  'Caesar Salad',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.'
+        ,
     },
 
     {

@@ -156,7 +156,7 @@ const restaurantMenu = [
         image: 'https://images.themodernproper.com/billowy-turkey/production/posts/2021/Chicken-Parmesan-14.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1618755606&s=cb9a4e64a5cd5948c2156f53ca5312ed',
         title:  'Chicken Parmagiana',
         price:  '9.99',
-        desc:   '',
+        desc:   'Breaded chicken breast covered in tomato sauce and mozzarella, parmesan, or provolone cheese',
     },
 
     {
@@ -164,7 +164,7 @@ const restaurantMenu = [
         image: 'https://www.yellowblissroad.com/wp-content/uploads/2019/07/Shrimp-Scampi-SQUARE.jpg',
         title:  'Shrimp Scampi',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Shrimp sauteed perfection and tossed in a garlic butter white wine sauce served over linguine noodles.',
     },
 
     {
@@ -172,7 +172,7 @@ const restaurantMenu = [
         image: 'https://keytomylime.com/wp-content/uploads/2021/07/Best-Creamy-Cajun-Chicken-Pasta-Recipe-735x735.jpg',
         title:  'Cajun Chicken Pasta',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Chicken dredged in cajun spices, sauteed with bell peppers, topped with basil-cream sauce over linguine.',
     },
 
     {
@@ -180,7 +180,7 @@ const restaurantMenu = [
         image: 'https://www.jocooks.com/wp-content/uploads/2020/07/skillet-steak-1-7-500x500.jpg',
         title:  'Wood Fired Steak',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Tender, flavorful, juicy, and steak cooked to perfection, topped in a peppercorn sauce',
     },
 
     {
@@ -188,7 +188,7 @@ const restaurantMenu = [
         image: 'https://www.thechunkychef.com/wp-content/uploads/2017/07/Bourbon-Bacon-Cheeseburgers-sideview-680x738.jpg',
         title:  'Classic Burger',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Juicy all-beef burger classic with lettuce, tomato, onion and pickles on a Brioche bun.',
     },
 
     {
@@ -196,7 +196,7 @@ const restaurantMenu = [
         image: 'https://cafedelites.com/wp-content/uploads/2017/03/Best-Crispy-Lemon-Garlic-Herb-Salmon-IMAGES-19-500x500.jpg',
         title:  'Salmon Filet',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Grilled salmon fillets with lemon pepper, garlic powder, and salt.',
     },
 
     {
@@ -204,7 +204,7 @@ const restaurantMenu = [
         image: 'https://static.onecms.io/wp-content/uploads/sites/44/2019/08/26231103/5565807.jpg',
         title:  'Maryland Style Crab Cakes',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Deep fried lump crab meat topped with Old Bay seasoning, served with Honey Dijon mustard',
     },
 
     {
@@ -212,7 +212,7 @@ const restaurantMenu = [
         image: 'https://www.verywellfit.com/thmb/zZl_RzLW_D1gpMi-ndGBpX8QM8U=/1414x1414/smart/filters:no_upscale()/chicken-marsala-962194078-04aca06b8b2b48588e40c8b57210c294.jpg',
         title:  'Chicken Marsala',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Golden pan-fried chicken cutlets and mushrooms in a rich Marsala wine sauce.',
     },
 
     {
@@ -220,7 +220,7 @@ const restaurantMenu = [
         image: 'http://cdn.shopify.com/s/files/1/0577/3616/7591/products/chicken-alfredo-8-1200.jpg?v=1625717688',
         title:  'Chicken Alfredo',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Chicken breast served over a bed of tender fettuccine pasta, topped with creamy Alfredo sauce',
     },
 
    
@@ -230,7 +230,7 @@ const restaurantMenu = [
         image: 'https://neighborfoodblog.com/wp-content/uploads/2019/09/stuffed-pork-tenderloin-4-720x720.jpg',
         title:  'Pork Tenderloin',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Tender, juicy, thin cut of pork, crusted in Italian herbs',
     },
 
     {
@@ -238,7 +238,7 @@ const restaurantMenu = [
         image: 'https://thebusybaker.ca/wp-content/uploads/2021/02/easy-eggplant-parmesan-fb-ig-5-scaled.jpg',
         title:  'Eggplant Parmesan',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Tender eggplant breaded in crispy breadcrumbs, topped with marinara and parmesan cheese',
     },
 
     {
@@ -246,7 +246,7 @@ const restaurantMenu = [
         image: 'https://www.thecountrycook.net/wp-content/uploads/2020/02/EASY-BAKED-ZITI-thumbnail.jpg',
         title:  'Baked Ziti',
         price:  '9.99',
-        desc:   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi culpa illo, accusamus quas atque.',
+        desc:   'Tomato-coated pasta is then combined with cheese, with a mixture of ricotta, mozzarella, and parmesan',
     },
 
 

@@ -71,6 +71,7 @@ body{
     align-items: center;
     padding: 3.5em 0;
     background: rgb(255, 251, 244);
+    border-radius: 4px;
 }
 
 .title{
@@ -136,9 +137,6 @@ body{
     padding: 0;
     justify-content: center;
    padding-left: 12px;
-   
-   
-   
 }
 
 

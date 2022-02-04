@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yaldevi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root{
     font-size: 16px;
@@ -9,7 +11,7 @@
     margin: 0;
     padding: 0;
     /*font-family: 'Kaisei HarunoUmi', serif;*/
-    font-family: 'Yaldevi', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 li{
@@ -23,6 +25,7 @@ a{
 body{
     position: relative;
     background: url("https://www.designyourway.net/blog/wp-content/uploads/2019/09/Seamless-wood-pattern-01.jpg");
+    background: white;
     font-size: 14px;
     padding: 4.25em 0;
 }
@@ -70,7 +73,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 3.5em 0;
-    background: rgb(255, 251, 244);
+    background: rgb(255, 255, 255);
     border-radius: 4px;
 }
 
@@ -127,7 +130,7 @@ body{
 
 
 .menu-grid{
-    background: rgb(255, 251, 244);
+    background: rgb(255, 255, 255);
     max-width: 90%;
     min-width: 90%;
     display: grid;
@@ -143,7 +146,7 @@ body{
 
 
 .meal-option{
-    background: rgb(255, 255, 255);
+    background: rgb(255, 217, 47);
     display: flex;
     align-items: center;
     box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.4);
@@ -222,7 +225,89 @@ body{
     font-size: 0.85em;
 }
 
+/* recipe section */
 
+.menu-grid{
+    background: rgb(255, 255, 255);
+    max-width: 90%;
+    min-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+    row-gap: 1.5em;
+    padding: 0;
+    justify-content: center;
+}
+
+
+.recipe-item{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 120px auto;
+    column-gap: 30px;
+    padding: 15px 20px;
+    /*background: rgb(240, 41, 108);*/
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.recipe-item:hover{
+    transform: translateY(-10px);
+}
+
+.recipe-item img{
+    max-width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+
+}
+
+.recipe-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recipe-info h2{
+    font-size: 25px;
+}
+
+.recipe-info p{
+    font-size: 17px;
+}
+
+.recipe-ratings{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.recipe-ratings i{
+    font-size: 20px;
+    margin-right: 3px;
+}
+
+/*dynamic coloring of items*/
+
+.recipe-item.appetizers{
+    background: rgb(241, 114, 9);
+}
+.recipe-item.salads{
+    background: rgb(0, 155, 13);
+}
+
+.recipe-item.entrees{
+    background: rgb(189, 4, 35);
+}
+
+
+.recipe-item.desserts{
+    background: rgb(255, 6, 89);
+}
 
 @media(max-width: 1024px){
 
@@ -252,7 +337,7 @@ body{
     
 }
 
-@media(max-width: 768px){
+@media(max-width: 800px){
 
      body{
          font-size: 16px;
@@ -285,7 +370,7 @@ body{
     
 }
 
-@media(max-width: 590px){
+@media(max-width: 600px){
 
     body{
         font-size: 10px;
@@ -295,14 +380,18 @@ body{
         font-size: 10px;
     }
 
-    .meal-option img{
-        width: 90px;
-        height: auto;
-        min-height: 90px;
-        max-height: 90px;
+    .recipe-item{
+        grid-template-columns: 100px auto;
+        column-gap: 10px;
     }
 
-   
+    .recipe-item h2{
+        font-size: 18px;
+    }
+    
+    .recipe-item p{
+        font-size: 12px;
+    }
     
 
     .title-price h4{

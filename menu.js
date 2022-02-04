@@ -1,6 +1,6 @@
 const restaurantMenu = [
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://www.dinneratthezoo.com/wp-content/uploads/2019/12/mozzarella-sticks-4-500x500.jpg',
         title:  'Mozzerella Sticks',
         price:  '9.99',
@@ -8,7 +8,7 @@ const restaurantMenu = [
     },
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://images.themodernproper.com/billowy-turkey/production/posts/2019/garlic-bread-10.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1599767628&s=08fa1a2e6dd3daeba5175c6eb9a2d06f',
         title:  'Garlic Bread',
         price:  '9.99',
@@ -16,7 +16,7 @@ const restaurantMenu = [
     },
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://dinnerthendessert.com/wp-content/uploads/2018/08/Buffalo-Wings-4-500x500.jpg',
         title:  'Buffalo Wings',
         price:  '9.99',
@@ -24,7 +24,7 @@ const restaurantMenu = [
     },
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://easyweeknightrecipes.com/wp-content/uploads/2020/07/Bruschetta-9-500x500.jpg',
         title:  'Fresh Bruschetta',
         price:  '9.99',
@@ -32,7 +32,7 @@ const restaurantMenu = [
     },
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://www.spendwithpennies.com/wp-content/uploads/2019/06/Garlic-Grilled-Shrimp-SpendWithPennies-3-500x500.jpg',
         title:  'Grilled Shrimp',
         price:  '9.99',
@@ -40,7 +40,7 @@ const restaurantMenu = [
     },
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://spicysouthernkitchen.com/wp-content/uploads/Fried-Jalapeno-Popper-Bites-9.jpg',
         title:  'Jalepeno Poppers',
         price:  '9.99',
@@ -48,7 +48,7 @@ const restaurantMenu = [
     },
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://www.dinneratthezoo.com/wp-content/uploads/2019/11/fried-calamari-67-500x500.jpg',
         title:  'Fried Calamari',
         price:  '9.99',
@@ -57,7 +57,7 @@ const restaurantMenu = [
 
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/stuffed-mushrooms-vertical-jpg-1525207616.jpg?crop=1.00xw:0.667xh;0,0.215xh&resize=480:*',
         title:  'Stuffed Mushrooms',
         price:  '9.99',
@@ -65,7 +65,7 @@ const restaurantMenu = [
     },
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://foodwithfeeling.com/wp-content/uploads/2021/08/truffle-fries-4-225x225.jpg',
         title:  'Truffle Fries',
         price:  '9.99',
@@ -74,7 +74,7 @@ const restaurantMenu = [
 
 
     {
-        category: 'appetizer',
+        category: 'appetizers',
         image: 'https://www.lemontreedwelling.com/wp-content/uploads/2020/10/air-fryer-onion-rings-featured-720x720.jpg',
         title:  'Onion Rings',
         price:  '9.99',
@@ -347,27 +347,27 @@ const menuGrid = document.querySelector('.menu-grid');
 window.addEventListener('DOMContentLoaded', function(){
     const appetizers = [];
     for(let i = 0; i < restaurantMenu.length; i++){
-        if(restaurantMenu[i].category === 'appetizer'){
+        if(restaurantMenu[i].category === 'appetizers'){
             appetizers.push(restaurantMenu[i]);
 
         }
     }
     
     const appetizersContent = appetizers.map(appetizer => `
-    <div class="meal-option">
-        <img class="meal-option-img" src="${appetizer.image}">
-        <div class="info">
-            <div class="title-price">
-                    <h4 class="item-title">${appetizer.title}</h4>
-                    <p class="desc">${appetizer.desc}</p>
+    <div class="recipe-item ${appetizer.category}">
+                <img class="recipe-img" src="${appetizer.image}">
+                <div class="recipe-info">
+                    <h2 class="recipe-title">${appetizer.title}</h2>
+                    <p>Recipe By: John Petran</p>
+                    <div class="recipe-ratings">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
             </div>
-
-        <p class="price">${appetizer.price}</p>
-        </div>
-     
-
-        <div class="bg-color"></div>
-    </div>
     `).join('');
 
     menuGrid.innerHTML = appetizersContent;
@@ -378,6 +378,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
  
 const categories = document.querySelectorAll('.option');
+const recipeItems = document.querySelectorAll('.recipe-item');
 
 categories.forEach(function(category){
     category.addEventListener('click', function(e){
@@ -386,12 +387,10 @@ categories.forEach(function(category){
         
         for(let i = 0; i < categories.length; i++){
             const selectedCategory = categories[i];//all of the individual indexes
-            console.log(selectedCategory);
+            
 
             if(e.target === selectedCategory){//if e.target = one of the indexes
-                let categoryIndex = i;
-                console.log(categoryIndex);//console.log(clicked on index)
-                categorySlider.style.transform = `translateX(${categoryIndex}00%)`;
+                categorySlider.style.transform = `translateX(${i}00%)`;
             }
         }
 
@@ -411,44 +410,33 @@ categories.forEach(function(category){
            } 
        }
 
-       console.log(categoryArray);
+       
 
        let displayCategoryItems = categoryArray.map(function(menuOption){
-           return `<div class="meal-option">
-       <img class="meal-option-img" src="${menuOption.image}">
-       <div class="info">
-           <div class="title-price">
-               <h4 class="item-title">${menuOption.title}</h4><!--title and info-->
-               <p class="desc">${menuOption.desc}</p>
+           return `<div class="recipe-item ${menuOption.category}">
+           <img class="recipe-img" src="${menuOption.image}">
+           <div class="recipe-info">
+               <h2 class="recipe-title">${menuOption.title}</h2>
+               <p>Recipe By: John Petran</p>
+               <div class="recipe-ratings">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star-half-alt"></i>
+               </div>
            </div>
+       </div>`;
+    })
 
-           <p class="price">${menuOption.price}</p>
-       </div>
-        
 
-       <div class="bg-color"></div>
-   </div>`;
-       })
-
-       console.log(displayCategoryItems);
        
        const menuContent = displayCategoryItems.join("");
        menuGrid.innerHTML = menuContent;
 
-       const categoryColors = document.querySelectorAll('.bg-color');
-
-       categoryColors.forEach(function(categoryColor){
-           if(e.target === categories[1]){
-               categoryColor.style.background = '#00641F';
-           } 
-           else if(e.target === categories[2]){
-               categoryColor.style.background = '#B90000';
-           } else if(e.target === categories[3]){
-               categoryColor.style.background = 'rgb(111, 0, 121)';
-           } else {
-            categoryColor.style.background = '#640000';
-           }
-       })
+       
+    
+    
       
        
        

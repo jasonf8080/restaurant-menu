@@ -154,7 +154,7 @@ const restaurantMenu = [
     {
         category: 'entrees',
         image: 'https://images.themodernproper.com/billowy-turkey/production/posts/2021/Chicken-Parmesan-14.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1618755606&s=cb9a4e64a5cd5948c2156f53ca5312ed',
-        title:  'Chicken Parmagiana',
+        title:  'Chicken Parmagian',
         price:  '9.99',
         desc:   'Breaded chicken breast covered in tomato sauce and mozzarella, parmesan, or provolone cheese',
     },

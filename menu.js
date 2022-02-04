@@ -185,7 +185,7 @@ const restaurantMenu = [
 
     {
         category: 'entrees',
-        image: 'https://www.thechunkychef.com/wp-content/uploads/2017/07/Bourbon-Bacon-Cheeseburgers-sideview-680x738.jpg',
+        image: 'https://www.brit.co/media-library/burger-recipes.jpg?id=21629003&width=600&quality=90',
         title:  'Classic Burger',
         price:  '9.99',
         desc:   'Juicy all-beef burger classic with lettuce, tomato, onion and pickles on a Brioche bun.',

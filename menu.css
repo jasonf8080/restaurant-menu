@@ -491,7 +491,10 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-   
+}
+
+.sps-item{
+    margin-right: 10px;
 }
     
 }

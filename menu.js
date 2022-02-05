@@ -358,60 +358,43 @@ const restaurantMenu = [
     
 
 ]
+
+
+
 const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 800
 });
 
 const menuGrid = document.querySelector('.menu-grid');
 
-
+ //dynamically add starter html (appetizers only)
 window.addEventListener('DOMContentLoaded', function(){
     const appetizers = [];
     for(let i = 0; i < restaurantMenu.length; i++){
         if(restaurantMenu[i].category === 'appetizers'){
             appetizers.push(restaurantMenu[i]);
-
         }
     }
     
-    const appetizersContent = appetizers.map(appetizer => `
-    <div class="recipe-item ${appetizer.category}">
-                <img class="recipe-img" src="${appetizer.image}">
-                <div class="recipe-info">
-                    <h2 class="recipe-title">${appetizer.title}</h2>
-                    <p>Recipe By: John Petran</p>
-                    <div class="recipe-ratings">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-    `).join('');
+    updateDOM(appetizers);
 
-    menuGrid.innerHTML = appetizersContent;
-    
-})  
+});  
 
 
-
- 
+//select a category
 const categories = document.querySelectorAll('.option');
+const selectedRecipeSection = document.querySelector('.selected-recipe');
 const selectedRecipeTitle = document.querySelector('.selected-recipe-title');
 const selectedRecipeDesc = document.querySelector('.selected-recipe-desc');
 const selectedRecipeImage = document.querySelector('.selected-recipe-img');
 const selectedRecipeIngredients = document.querySelector('.ingredients-list');
 
 
-
-
 categories.forEach(function(category){
     category.addEventListener('click', function(e){
        
+        //update categorySlider
         const categorySlider = document.querySelector('.category-slider');
-        
         for(let i = 0; i < categories.length; i++){
             const selectedCategory = categories[i];//all of the individual indexes
             
@@ -420,9 +403,7 @@ categories.forEach(function(category){
                 categorySlider.style.transform = `translateX(${i}00%)`;
             }
         }
-
     
-
 
        //show selected menu items based on category
        const categoryID = e.target.getAttribute('id');
@@ -437,56 +418,112 @@ categories.forEach(function(category){
            } 
        }
 
-       
+       updateDOM(categoryArray)
 
-       let displayCategoryItems = categoryArray.map(menuOption => `
-       <a href="#selected-recipe" class="recipe-item ${menuOption.category}">
-        <img class="recipe-img" src="${menuOption.image}">
-        <div class="recipe-info">
-            <h2 class="recipe-title">${menuOption.title}</h2>
-            <p>Recipe By: John Petran</p>
-            <div class="recipe-ratings">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-        </div>
-       </a>`).join('');
-    
-       menuGrid.innerHTML = displayCategoryItems;
 
-       
-       
+
+       //select a recipe 
        const recipeItems = document.querySelectorAll('.recipe-item');
        recipeItems.forEach(function(recipeItem){
            recipeItem.addEventListener('click', function(e){
-                if(e.target.classList.contains('recipe-item') || !e.target.classList.contains('recipe-item')){
-                    const recipeTitle = recipeItem.children[1].children[0].textContent;
-
-                    for(let i = 0; i < restaurantMenu.length; i++){
-                        if(recipeTitle === restaurantMenu[i].title){
-                            selectedRecipeTitle.textContent = restaurantMenu[i].title;
-                            selectedRecipeDesc.textContent = restaurantMenu[i].desc;
-                            selectedRecipeImage.src = restaurantMenu[i].image;
-
-                            const ingredientsList = restaurantMenu[i].ingredients.map(ingredient => `
-                            <li>- ${ingredient}</li>
-                            `).join('');
-
-                            selectedRecipeIngredients.innerHTML = ingredientsList;
-
-                        }
-                    }
-                } 
+                const recipeTitle = recipeItem.children[1].children[0].textContent;
+                selectRecipe(recipeTitle);
            })
        })
-    
-       
        
     })
 })
 
+
+
+
+//add search list items dynamically
+const searchFilter = document.querySelector('.recipe-search');
+const searchResultList = document.querySelector('.search-list');
+
+
+
+const searchItems = restaurantMenu.map(recipe => `
+    <a href="#selected-recipe" class="search-item">
+        <img class="search-result-image" src="${recipe.image}">
+        <h4 class="search-result-title">${recipe.title}</h4>
+    </a>
+`).join('');
+
+searchResultList.innerHTML = searchItems;
+
+const searchResults = document.querySelectorAll('.search-item');
+searchFilter.addEventListener('keyup', function(e){
+    const inputValue = e.target.value.toLowerCase();
+
+    for(let i = 0; i < searchResults.length; i++){
+        const match = searchResults[i].children[1].textContent;
+        if(match.toLowerCase().includes(inputValue)){
+            searchResults[i].classList.add('show');
+        } else {
+            searchResults[i].classList.remove('show');
+        }
+    }
+
+
+    //clear the input list if input is empty
+    if(inputValue === ''){
+        searchResults.forEach(function(searchResult){
+            searchResult.classList.remove('show');
+        })
+    }
+})
+
+
+//select a recipe from search list
+searchResults.forEach(function(searchResult){
+    searchResult.addEventListener('click', function(e){
+       const selection = searchResult.children[1].textContent;
+       selectRecipe(selection);
+    })
+})
+
+
+
+
+
+function updateDOM(array){
+    let displayCategoryItems = array.map(menuOption => `
+    <a href="#selected-recipe" class="recipe-item ${menuOption.category}">
+     <img class="recipe-img" src="${menuOption.image}">
+     <div class="recipe-info">
+         <h2 class="recipe-title">${menuOption.title}</h2>
+         <p>Recipe By: John Petran</p>
+         <div class="recipe-ratings">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star-half-alt"></i>
+         </div>
+     </div>
+    </a>`).join('');
  
+    menuGrid.innerHTML = displayCategoryItems;
+}
+
+
+
+
+function selectRecipe(element){
+    for(let i = 0; i < restaurantMenu.length; i++){
+        if(element === restaurantMenu[i].title){
+            selectedRecipeTitle.textContent = restaurantMenu[i].title;
+            selectedRecipeDesc.textContent = restaurantMenu[i].desc;
+            selectedRecipeImage.src = restaurantMenu[i].image;
+            selectedRecipeSection.classList.add(restaurantMenu[i].category);
+
+            const ingredientsList = restaurantMenu[i].ingredients.map(ingredient => `
+            <li>- ${ingredient}</li>
+            `).join('');
+
+            selectedRecipeIngredients.innerHTML = ingredientsList;
+        }
+    }  
+}
 

@@ -381,8 +381,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 100%;
-    max-width: 70px;
+    width: 70px;
     height: 70px;
     margin-bottom: 8px;
     transition: background 0.5s;

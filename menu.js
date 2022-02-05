@@ -5,6 +5,7 @@ const restaurantMenu = [
         title:  'Mozzerella Sticks',
         price:  '9.99',
         desc:   'Sticks of mozzarella cheese that are coated in seasoned Italian breadcrumbs, then deep fried until golden brown',
+        ingredients: ['1⁄4 cup flour', '1 cup Italian style breadcrumbs', '2 eggs', '1 tablespoon milk', '1 lb mozzerella cheese', '1 cup vegetable oil', '1 cup marinara sauce']
     },
 
     {
@@ -13,6 +14,7 @@ const restaurantMenu = [
         title:  'Garlic Bread',
         price:  '9.99',
         desc:   'Toasty, buttery, herby, covered in a dusting of salty parmesan cheese, piping hot and fresh out of the oven',
+        ingredients: ['1/2 cup butter', '1 1/2 tablespoons garlic powder', '1 tablespoon dried parsley', '1 pound loaf Italian bread, cut into 1/2 inch slices', '8 ounce package shredded mozzarella cheese']
     },
 
     {
@@ -21,6 +23,7 @@ const restaurantMenu = [
         title:  'Buffalo Wings',
         price:  '9.99',
         desc:   'Chicken wings coated with a vinegar-and-cayenne-pepper hot sauce mixed with butter. ',
+        ingredients: ['5 pounds chicken wings', '4 cups vinegar-based hot pepper sauce', '1/4 cup butter', '6 tablespoons blue cheese dressing', '1/2 onion', '1/2 teaspoon crushed red pepper flakes',]
     },
 
     {
@@ -29,6 +32,7 @@ const restaurantMenu = [
         title:  'Fresh Bruschetta',
         price:  '9.99',
         desc:   'Grilled bread rubbed with garlic and topped with olive oil, salt, tomatoes, and balsalmic vinegar.',
+        ingredients: ['12 roma tomatoes', '1/3 cup extra virgin olive oil', '3 cloves garlic', '1 cup chopped fresh basil leaves', '2 tablespoons minced shallots', '1 loaf Italian bread, cut into 1/2 inch slices'] 
     },
 
     {
@@ -37,6 +41,7 @@ const restaurantMenu = [
         title:  'Grilled Shrimp',
         price:  '9.99',
         desc:   'Shrimp grilled combined with olive oil, red wine vinegar, garlic, Italian seasoning, salt, and pepper',
+        ingredients: ['15 large tiger shrimp', '1 teaspoon garlic powder', '2 tablespoons lime juice', '1/4 cup olive oil', '1 teaspoon garlic powder', '1 teaspoon cajun seasoning']
     },
 
     {
@@ -45,6 +50,7 @@ const restaurantMenu = [
         title:  'Jalepeno Poppers',
         price:  '9.99',
         desc:   'Spicy jalapeños and cheese fried in a golden brown shell',
+        ingredients: ['', '', '', '', '', '']
     },
 
     {
@@ -53,6 +59,7 @@ const restaurantMenu = [
         title:  'Fried Calamari',
         price:  '9.99',
         desc:   'Tender pieces of squid soaked in buttermilk, then coated in seasoned flour and deep fried to golden brown',
+        ingredients: ['', '', '', '', '', '']
     },
 
 
@@ -62,6 +69,7 @@ const restaurantMenu = [
         title:  'Stuffed Mushrooms',
         price:  '9.99',
         desc:   'Mushrooms stuffed with shallots, garlic, walnuts, breadcrumbs, and chopped mushroom stems.',
+        ingredients: ['', '', '', '', '', '']
     },
 
     {
@@ -70,6 +78,7 @@ const restaurantMenu = [
         title:  'Truffle Fries',
         price:  '9.99',
         desc:   'Thin cut deep-fried potatoes topped with truffle oil, fresh herbs and spices, garlic, and cheese,',
+        ingredients: ['', '', '', '', '', '']
     },
 
 
@@ -79,6 +88,7 @@ const restaurantMenu = [
         title:  'Onion Rings',
         price:  '9.99',
         desc:   'Large white onions sliced into rings, dipped in a batter and bread crumbs then deep fried',
+        ingredients: ['', '', '', '', '', '']
     },
 
     {
@@ -86,8 +96,8 @@ const restaurantMenu = [
         image: 'https://www.jessicagavin.com/wp-content/uploads/2019/07/caesar-salad-10-1200.jpg',
         title:  'Caesar Salad',
         price:  '9.99',
-        desc:   'Romaine lettuce tossed with a creamy caesar dressing and grated cheese, topped with croutons'
-        ,
+        desc:   'Romaine lettuce tossed with a creamy caesar dressing and grated cheese, topped with croutons',
+        ingredients: ['5 pounds chicken wings', '4 cups vinegar-based hot pepper sauce', '1/4 cup butter', '6 tablespoons blue cheese dressing', '1/2 onion', '1/2 teaspoon crushed red pepper flakes',]
     },
 
     {
@@ -96,6 +106,7 @@ const restaurantMenu = [
         title:  'Italian Salad',
         price:  '9.99',
         desc:   'Salad with romaine lettuce, croutons, tomatoes, pepperoncini, parmesan, topped with Italian dressing',
+        ingredients: ['5 pounds chicken wings', '4 cups vinegar-based hot pepper sauce', '1/4 cup butter', '6 tablespoons blue cheese dressing', '1/2 onion', '1/2 teaspoon crushed red pepper flakes',]
     },
 
     {
@@ -104,6 +115,7 @@ const restaurantMenu = [
         title:  'Grilled Chicken Salad',
         price:  '9.99',
         desc:   'Tender marinated chicken served over lettuce with bacon, avocado, corn, blue cheese and tomatoes',
+        ingredients: ['', '', '', '', '', '']
     },
 
 
@@ -113,6 +125,7 @@ const restaurantMenu = [
         title:  'Fresh Garden Salad',
         price:  '9.99',
         desc:   'Tossed green salad made with carrots, tomatoes, cucumbers and onions',
+        ingredients: ['', '', '', '', '', '']
     },
 
     {
@@ -121,6 +134,7 @@ const restaurantMenu = [
         title:  'Minestrone Soup',
         price:  '9.99',
         desc:   'Italian vegetable soup filled with pasta, beans, tomatoes, and veggies, seasoned with Italian herbs.',
+        ingredients: ['', '', '', '', '', '']
     },
 
     {
@@ -129,6 +143,7 @@ const restaurantMenu = [
         title:  'Pasta Fagoli',
         price:  '9.99',
         desc:   'Italian style soup with tender pasta, creamy beans, and delicious herbs in a rich and savory broth.',
+        ingredients: ['', '', '', '', '', '']
     },
 
 
@@ -138,6 +153,7 @@ const restaurantMenu = [
         title:  'French Onion Soup',
         price:  '9.99',
         desc:   'French style soup prepared with beef stock, caramelized onions, topped with cheesy bread',
+        ingredients: ['', '', '', '', '', '']
     },
     
 
@@ -147,6 +163,7 @@ const restaurantMenu = [
         title:  'Tortellini Soup',
         price:  '9.99',
         desc:   'Creamy soup with rich cheese tortellini, ground beef, tomatoes and vegetables, and flavorful herbs.',
+        ingredients: ['', '', '', '', '', '']
     },
 
  
@@ -341,8 +358,12 @@ const restaurantMenu = [
     
 
 ]
+const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800
+});
 
 const menuGrid = document.querySelector('.menu-grid');
+
 
 window.addEventListener('DOMContentLoaded', function(){
     const appetizers = [];
@@ -378,7 +399,13 @@ window.addEventListener('DOMContentLoaded', function(){
 
  
 const categories = document.querySelectorAll('.option');
-const recipeItems = document.querySelectorAll('.recipe-item');
+const selectedRecipeTitle = document.querySelector('.selected-recipe-title');
+const selectedRecipeDesc = document.querySelector('.selected-recipe-desc');
+const selectedRecipeImage = document.querySelector('.selected-recipe-img');
+const selectedRecipeIngredients = document.querySelector('.ingredients-list');
+
+
+
 
 categories.forEach(function(category){
     category.addEventListener('click', function(e){
@@ -412,37 +439,54 @@ categories.forEach(function(category){
 
        
 
-       let displayCategoryItems = categoryArray.map(function(menuOption){
-           return `<div class="recipe-item ${menuOption.category}">
-           <img class="recipe-img" src="${menuOption.image}">
-           <div class="recipe-info">
-               <h2 class="recipe-title">${menuOption.title}</h2>
-               <p>Recipe By: John Petran</p>
-               <div class="recipe-ratings">
-                   <i class="fas fa-star"></i>
-                   <i class="fas fa-star"></i>
-                   <i class="fas fa-star"></i>
-                   <i class="fas fa-star"></i>
-                   <i class="fas fa-star-half-alt"></i>
-               </div>
-           </div>
-       </div>`;
-    })
-
+       let displayCategoryItems = categoryArray.map(menuOption => `
+       <a href="#selected-recipe" class="recipe-item ${menuOption.category}">
+        <img class="recipe-img" src="${menuOption.image}">
+        <div class="recipe-info">
+            <h2 class="recipe-title">${menuOption.title}</h2>
+            <p>Recipe By: John Petran</p>
+            <div class="recipe-ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+       </a>`).join('');
+    
+       menuGrid.innerHTML = displayCategoryItems;
 
        
-       const menuContent = displayCategoryItems.join("");
-       menuGrid.innerHTML = menuContent;
-
        
+       const recipeItems = document.querySelectorAll('.recipe-item');
+       recipeItems.forEach(function(recipeItem){
+           recipeItem.addEventListener('click', function(e){
+                if(e.target.classList.contains('recipe-item') || !e.target.classList.contains('recipe-item')){
+                    const recipeTitle = recipeItem.children[1].children[0].textContent;
+
+                    for(let i = 0; i < restaurantMenu.length; i++){
+                        if(recipeTitle === restaurantMenu[i].title){
+                            selectedRecipeTitle.textContent = restaurantMenu[i].title;
+                            selectedRecipeDesc.textContent = restaurantMenu[i].desc;
+                            selectedRecipeImage.src = restaurantMenu[i].image;
+
+                            const ingredientsList = restaurantMenu[i].ingredients.map(ingredient => `
+                            <li>- ${ingredient}</li>
+                            `).join('');
+
+                            selectedRecipeIngredients.innerHTML = ingredientsList;
+
+                        }
+                    }
+                } 
+           })
+       })
     
-    
-      
        
        
     })
 })
 
  
-
 

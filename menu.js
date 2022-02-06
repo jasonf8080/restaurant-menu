@@ -5,7 +5,8 @@ const restaurantMenu = [
         title:  'Mozzerella Sticks',
         price:  '9.99',
         desc:   'Sticks of mozzarella cheese that are coated in seasoned Italian breadcrumbs, then deep fried until golden brown',
-        ingredients: ['1⁄4 cup flour', '1 cup Italian style breadcrumbs', '2 eggs', '1 tablespoon milk', '1 lb mozzerella cheese', '1 cup vegetable oil', '1 cup marinara sauce']
+        ingredients: ['1⁄4 cup flour', '1 cup Italian style breadcrumbs', '2 eggs', '1 tablespoon milk', '1 lb mozzerella cheese', '1 cup vegetable oil', '1 cup marinara sauce'],
+        steps: ['Beat the eggs in a mixing bowl. Whisk in the milk, then set aside. Place the bread crumbs into a plastic bag, and set aside', 'Separate and place an egg roll wrapper onto your work surface with one of the tips pointed towards you. Moisten the two far edges of the wrapper with water. Place a string cheese stick onto the corner nearest you, and roll it in 1/3 of the way, fold over the right and left corners, then continue rolling to the end, pressing to seal. Repeat with the remaining string cheese sticks and egg roll wrappers.', 'Heat oil in a deep-fryer or large saucepan to 375 degrees F (190 degrees C).', 'Dip the mozzarella sticks into the egg wash, then toss in the bread crumbs. Cook in batches in the hot oil until crisp and golden brown, 3 to 4 minutes.']
     },
 
     {
@@ -14,7 +15,8 @@ const restaurantMenu = [
         title:  'Garlic Bread',
         price:  '9.99',
         desc:   'Toasty, buttery, herby, covered in a dusting of salty parmesan cheese, piping hot and fresh out of the oven',
-        ingredients: ['1/2 cup butter', '1 1/2 tablespoons garlic powder', '1 tablespoon dried parsley', '1 pound loaf Italian bread, cut into 1/2 inch slices', '8 ounce package shredded mozzarella cheese']
+        ingredients: ['1/2 cup butter', '1 1/2 tablespoons garlic powder', '1 tablespoon dried parsley', '1 pound loaf Italian bread, cut into 1/2 inch slices', '8 ounce package shredded mozzarella cheese'],
+        steps: ['Preheat oven to 350 degrees F (175 degrees C).', 'In a small saucepan over medium heat, melt butter and mix with garlic powder and dried parsley.', 'Place Italian bread on a medium baking sheet. Using a basting brush, brush generously with the butter mixture.', 'Bake in the preheated oven approximately 10 minutes, until lightly toasted. Remove from heat. Sprinkle with mozzarella cheese and any remaining butter mixture. Return to oven approximately 5 minutes, or until cheese is melted and bread is lightly browned.']
     },
 
     {
@@ -23,7 +25,9 @@ const restaurantMenu = [
         title:  'Buffalo Wings',
         price:  '9.99',
         desc:   'Chicken wings coated with a vinegar-and-cayenne-pepper hot sauce mixed with butter. ',
-        ingredients: ['5 pounds chicken wings', '4 cups vinegar-based hot pepper sauce', '1/4 cup butter', '6 tablespoons blue cheese dressing', '1/2 onion', '1/2 teaspoon crushed red pepper flakes',]
+        ingredients: ['5 pounds chicken wings', '4 cups vinegar-based hot pepper sauce', '1/4 cup butter', '6 tablespoons blue cheese dressing', '1/2 onion', '1/2 teaspoon crushed red pepper flakes',],
+        steps: ['Preheat an outdoor grill for medium-high heat. Soak hickory wood chips in water.', 'Use a large pot that can be placed on the grill to combine the hot sauce, butter, blue cheese dressing, cherry peppers, onion, black pepper, and red pepper flakes. Stir until well blended, and place on the grate of the grill. Bring to a simmer, and cook for 15 or 20 minutes.', 'Sprinkle some soaked chips on the hot coals. Place chicken wings on the grill, and brush generously with sauce. Grill, turning and basting frequently for 20 to 40 minutes, or until meat is no longer pink and the outside is brown and crispy. Serve with lots of cold drinks!']
+
     },
 
     {
@@ -32,7 +36,8 @@ const restaurantMenu = [
         title:  'Fresh Bruschetta',
         price:  '9.99',
         desc:   'Grilled bread rubbed with garlic and topped with olive oil, salt, tomatoes, and balsalmic vinegar.',
-        ingredients: ['12 roma tomatoes', '1/3 cup extra virgin olive oil', '3 cloves garlic', '1 cup chopped fresh basil leaves', '2 tablespoons minced shallots', '1 loaf Italian bread, cut into 1/2 inch slices'] 
+        ingredients: ['12 roma tomatoes', '1/3 cup extra virgin olive oil', '3 cloves garlic', '1 cup chopped fresh basil leaves', '2 tablespoons minced shallots', '1 loaf Italian bread, cut into 1/2 inch slices'],
+        steps: ['In a large bowl, toss together the roma tomatoes, minced garlic, shallots, basil, lemon juice, salt, pepper and 1/3 cup olive oil.', 'Place the slivered garlic and 1/4 cup olive oil in small saucepan over medium heat. Slowly cook and stir 2 to 3 minutes. Discard garlic.', 'Toast the bread slices, and brush with the olive oil heated with garlic. Top slices with the roma tomato mixture.']
     },
 
     {
@@ -377,6 +382,9 @@ window.addEventListener('DOMContentLoaded', function(){
     }
     
     updateDOM(appetizers);
+    
+    const recipeItems = document.querySelectorAll('.recipe-item');
+    selectRecipeFromMain(recipeItems);
 
 });  
 
@@ -388,6 +396,7 @@ const selectedRecipeTitle = document.querySelector('.selected-recipe-title');
 const selectedRecipeDesc = document.querySelector('.selected-recipe-desc');
 const selectedRecipeImage = document.querySelector('.selected-recipe-img');
 const selectedRecipeIngredients = document.querySelector('.ingredients-list');
+const selectedRecipeSteps = document.querySelector('.recipe-steps');
 
 
 categories.forEach(function(category){
@@ -421,18 +430,12 @@ categories.forEach(function(category){
        updateDOM(categoryArray)
 
 
-
        //select a recipe 
        const recipeItems = document.querySelectorAll('.recipe-item');
-       recipeItems.forEach(function(recipeItem){
-           recipeItem.addEventListener('click', function(e){
-                const recipeTitle = recipeItem.children[1].children[0].textContent;
-                selectRecipe(recipeTitle);
-           })
-       })
+       selectRecipeFromMain(recipeItems);
        
     })
-})
+});
 
 
 
@@ -472,7 +475,18 @@ searchFilter.addEventListener('keyup', function(e){
             searchResult.classList.remove('show');
         })
     }
+
+    //select a recipe from search list
+    searchResults.forEach(function(searchResult){
+    searchResult.addEventListener('click', function(e){
+       const selection = searchResult.children[1].textContent;
+       addRecipe(selection);
+       inputValue === '';
+    })
 })
+
+
+});
 
 
 //select a recipe from search list
@@ -480,13 +494,25 @@ searchResults.forEach(function(searchResult){
     searchResult.addEventListener('click', function(e){
        const selection = searchResult.children[1].textContent;
        selectRecipe(selection);
+       
     })
 })
 
+//multiple use functions
+
+//select recipe from main section
+function selectRecipeFromMain(recipeItems){
+    recipeItems.forEach(function(recipeItem){
+        recipeItem.addEventListener('click', function(e){
+             const recipeTitle = recipeItem.children[1].children[0].textContent;
+             addRecipe(recipeTitle);
+        })
+    })
+}
 
 
 
-
+//update DOM to display correct section
 function updateDOM(array){
     let displayCategoryItems = array.map(menuOption => `
     <a href="#selected-recipe" class="recipe-item ${menuOption.category}">
@@ -509,20 +535,33 @@ function updateDOM(array){
 
 
 
-
-function selectRecipe(element){
+//
+function addRecipe(element){
     for(let i = 0; i < restaurantMenu.length; i++){
         if(element === restaurantMenu[i].title){
             selectedRecipeTitle.textContent = restaurantMenu[i].title;
             selectedRecipeDesc.textContent = restaurantMenu[i].desc;
             selectedRecipeImage.src = restaurantMenu[i].image;
             selectedRecipeSection.classList.add(restaurantMenu[i].category);
+        
+            
+           
 
             const ingredientsList = restaurantMenu[i].ingredients.map(ingredient => `
             <li>- ${ingredient}</li>
             `).join('');
 
+            const steps = restaurantMenu[i].steps;
+
+            const stepsList = restaurantMenu[i].steps.map(step => `
+            <li>
+                <span class="step-number">${steps.indexOf(step) + 1}</span>
+                <p class="step-content">${step}</p>
+            </li>
+            `).join('');
+
             selectedRecipeIngredients.innerHTML = ingredientsList;
+            selectedRecipeSteps.innerHTML = stepsList;
         }
     }  
 }

@@ -46,7 +46,8 @@ const restaurantMenu = [
         title:  'Grilled Shrimp',
         price:  '9.99',
         desc:   'Shrimp grilled combined with olive oil, red wine vinegar, garlic, Italian seasoning, salt, and pepper',
-        ingredients: ['15 large tiger shrimp', '1 teaspoon garlic powder', '2 tablespoons lime juice', '1/4 cup olive oil', '1 teaspoon garlic powder', '1 teaspoon cajun seasoning']
+        ingredients: ['15 large tiger shrimp', '1 teaspoon garlic powder', '2 tablespoons lime juice', '1/4 cup olive oil', '1 teaspoon garlic powder', '1 teaspoon cajun seasoning'],
+        steps: ['Whisk olive oil, lime juice, tequila, garlic powder, Cajun seasoning, seasoned salt, and black pepper in a bowl; pour into a resealable plastic bag. Add shrimp, coat with the marinade, squeeze out excess air, and seal the bag. Marinate in the refrigerator for 1 to 4 hours.', 'Preheat an outdoor grill for medium-high heat and lightly oil the grate. Soak wooden skewers in a bowl of water for 30 minutes.', 'Remove shrimp from the marinade, and shake off excess. Discard the remaining marinade. Thread shrimp on skewers, piercing once near the tail and once near the head.', 'Arrange skewers on preheated grill; cook shrimp until they are bright pink on the outside and the meat is no longer transparent in the center, 6 to 8 minutes.']
     },
 
     {
@@ -55,7 +56,8 @@ const restaurantMenu = [
         title:  'Jalepeno Poppers',
         price:  '9.99',
         desc:   'Spicy jalapeños and cheese fried in a golden brown shell',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['12 ounces jalapeno peppers, seeded and halved', '1 (8 ounce) package shredded Cheddar cheese', '1 cup all-purpose flour', '1 cup dry bread crumbs', '2 quarts oil for frying', '1 cup milk'],
+        steps: ['In a medium bowl, mix the cream cheese, Cheddar cheese and bacon bits. Spoon this mixture into the jalapeno pepper halve', 'Put the milk and flour into two separate small bowls. Dip the stuffed jalapenos first into the milk then into the flour, making sure they are well coated with each. Allow the coated jalapenos to dry for about 10 minutes', 'Dip the jalapenos in milk again and roll them through the breadcrumbs. Allow them to dry, then repeat to ensure the entire surface of the jalapeno is coated.', 'In a medium skillet, heat the oil to 365 degrees F ( 180 degrees C). Deep fry the coated jalapenos 2 to 3 minutes each, until golden brown. Remove and let drain on a paper towel.']
     },
 
     {
@@ -64,7 +66,8 @@ const restaurantMenu = [
         title:  'Fried Calamari',
         price:  '9.99',
         desc:   'Tender pieces of squid soaked in buttermilk, then coated in seasoned flour and deep fried to golden brown',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['1 pound calamari tubes, thawed if frozen', '6 cups all-purpose flour', '2 cups whole milk', '1 tablespoon fresh parsley, or to taste', '1 wedge lemon', '4 eggs', '1 cup peanut oil'],
+        steps: ['Check calamari for breaks and slice into 1/8- to 1/4-inch rings', 'Heat oil in a deep-fryer or large saucepan to 400 degrees F (200 degrees C).', 'Place 2 cups flour in a bowl. Whisk milk and eggs together in a separate bowl. Place remaining 4 cups flour, cornstarch, paprika, salt, pepper, and cayenne in a third bowl; mix thoroughly.', 'Toss calamari rings in the plain flour. Move to the egg mixture and thoroughly coat. Move to the seasoned flour and coat fully. Move back to egg mixture if not thoroughly coated; coat with seasoned flour again.', 'Submerge floured calamari in the hot oil until golden, 3 to 4 minutes per batch. Lift out with a slotted spoon, letting oil drip off. Drain on paper towels. Place calamari in a small bowl; check seasoning. Add parsley and lemon wedge for garnish']
     },
 
 
@@ -74,7 +77,8 @@ const restaurantMenu = [
         title:  'Stuffed Mushrooms',
         price:  '9.99',
         desc:   'Mushrooms stuffed with shallots, garlic, walnuts, breadcrumbs, and chopped mushroom stems.',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['12 medium mushrooms', '2 tablespoons olive oil', '1/2 cup chopped red onion', '3 cloves garlic, chopped', '2 tablespoons grated Asiago cheese', '1 tablespoon ricotta cheese'],
+        steps: ['Preheat the oven to 400 degrees F (200 degrees C). Grease a baking sheet.', 'Remove stems from mushrooms. Chop stems and set aside. Brush caps with 1 tablespoon olive oil and place on the prepared baking sheet with the open sides up.', 'Heat remaining 1 tablespoon oil in a skillet over medium heat. Add onion, garlic, and Italian seasoning; cook for 2 minutes. Add mushroom stems and cook until tender, about 5 minutes. Remove from the heat and transfer to a bowl.', 'Add Asiago cheese and ricotta cheese to the onion-mushroom mixture and mix to combine. Season with salt and pepper. Fill each mushroom cap with a spoonful of the mixture.', 'Bake in the preheated oven until mushrooms are tender and filling is bubbling slightly, 20 to 25 minutes.']
     },
 
     {
@@ -83,7 +87,8 @@ const restaurantMenu = [
         title:  'Truffle Fries',
         price:  '9.99',
         desc:   'Thin cut deep-fried potatoes topped with truffle oil, fresh herbs and spices, garlic, and cheese,',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['6 large red potatoes', '3 cups canola oil', '1/4 cup grated Parmesan cheese', '3 cloves garlic', '2 1/2 tablespoons truffle oil', '2 tablespoons sea salt, or more to taste'],
+        steps: ['Cut potatoes to desired size, but not too thick.', 'Place fries into a microwave-safe container and microwave for 4 minutes.', 'Place oil into a frying pan and heat to 375 degrees F (190 degrees C).', 'Place 1 to 2 handfuls of fries in the frying pan and fry until browned and soft, 4 to 5 minutes, turning and tossing frequently to cook evenly.', 'Preheat the oven to 225 degrees F (110 degrees C).', 'Drain fries in a bowl lined with a paper towel. Toss fries in the bowl to get rid of excess oil; remove paper towel.', 'Combine Parmesan cheese, garlic, salt, and pepper in a bowl. Toss fries in the mixture until well mixed. Drizzle fries with truffle oil and toss again until well mixed.', 'Bake in the preheated oven to allow truffle oil to settle and reheat fries, 5 to 7 minutes. Serve fries while hot.']
     },
 
 
@@ -93,7 +98,8 @@ const restaurantMenu = [
         title:  'Onion Rings',
         price:  '9.99',
         desc:   'Large white onions sliced into rings, dipped in a batter and bread crumbs then deep fried',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['1 yellow onion - ends trimmed off, peeled, and cut crosswise into 1/2-inch slices', '3 cups panko bread crumbs, or more if needed', '½ cup all-purpose flour', '2 tablespoons milk', '2 eggs', '1 pinch cayenne pepper'],
+        steps: ['Preheat oven to 450 degrees F (230 degrees C).', 'Separate onion slices into individual rings.', 'Whisk eggs with milk in a bowl until thoroughly combined; season egg mixture with a pinch of cayenne pepper. Place panko crumbs into a separate bowl.', 'Place onion rings into a large resealable plastic bag. Add flour, salt, and black pepper; seal bag and shake until rings are well coated with flour.', 'Drop flour-coated onion rings into egg white-milk mixture, a few at a time, and toss lightly with tongs until coated. Place rings into panko crumbs and gently shake the bowl to toss the crumbs with the onion rings until rings are coated with crumbs', 'Transfer coated onion rings to a large baking sheet; spray rings lightly with cooking spray.', 'Bake in the preheated oven until onion rings are tender and crumbs are lightly golden brown, 12 to 15 minutes.']
     },
 
     {

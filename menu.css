@@ -289,7 +289,7 @@ body{
     display: none;
     flex-direction: column; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 30px;
+    padding: 50px 0;
 }
 
 .selected-recipe.active{
@@ -483,7 +483,6 @@ body{
 
     .search-container{
         width: 80%;
-        border: 1px solid red;
     }
 
     .search-list{
@@ -533,6 +532,8 @@ body{
 }
 
 .sps-item{
+    height: 50px;
+    width: 50px;
     margin-right: 10px;
 }
     

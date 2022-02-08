@@ -108,7 +108,8 @@ const restaurantMenu = [
         title:  'Caesar Salad',
         price:  '9.99',
         desc:   'Romaine lettuce tossed with a creamy caesar dressing and grated cheese, topped with croutons',
-        ingredients: ['5 pounds chicken wings', '4 cups vinegar-based hot pepper sauce', '1/4 cup butter', '6 tablespoons blue cheese dressing', '1/2 onion', '1/2 teaspoon crushed red pepper flakes',]
+        ingredients: ['1 head romaine lettuce', '2 cloves garlic, chopped', '1 cup mayonnaise', '1/3 cup grated Parmesan cheese', '1 tablespoon Dijon mustard', '1 tablespoon white wine vinegar', '4 tablespoons croutons', '¼ cup olive oil'],
+        steps: ['Wash the lettuce and dry the leaves well. Tear into 1 to 2 inch pieces, and transfer to a salad bowl.', 'Using a food processor puree or pulverize the garlic. Add the lemon juice, mustard, garlic, oil, pepper, parmesan cheese, and vinegar and mix well. Just before serving, toss the romaine lettuce with the dressing and top with croutons.']
     },
 
     {
@@ -117,7 +118,8 @@ const restaurantMenu = [
         title:  'Italian Salad',
         price:  '9.99',
         desc:   'Salad with romaine lettuce, croutons, tomatoes, pepperoncini, parmesan, topped with Italian dressing',
-        ingredients: ['5 pounds chicken wings', '4 cups vinegar-based hot pepper sauce', '1/4 cup butter', '6 tablespoons blue cheese dressing', '1/2 onion', '1/2 teaspoon crushed red pepper flakes',]
+        ingredients: ['5 cups romaine lettuce', '1/2 cup canola oil', '1/3 cup tarragon vinegar', '1 carrot', '1 red onion', '1/4 cup black olives', '½ cucumber, sliced', , '2 cloves garlic, minced', '1/2 teaspoon dry mustard'],
+        steps: ['In a medium container with a lid, mix canola oil, tarragon vinegar, dry mustard, and garlic. Cover, and shake until well blended.', 'In a large bowl, toss together lettuce, carrot, red onion, black olives, cucumber, and Romano cheese. Season with pepper. Pour in the artichoke and marinade mixture, and toss to coat.']
     },
 
     {
@@ -126,7 +128,8 @@ const restaurantMenu = [
         title:  'Grilled Chicken Salad',
         price:  '9.99',
         desc:   'Tender marinated chicken served over lettuce with bacon, avocado, corn, blue cheese and tomatoes',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['4 cups chopped grilled chicken', '1 cup mayonnaise', '1/2 cup bacon', '1 avacado', '1 sliced tomate', '1/2 cup blue cheese', '1/8 teaspoon garlic powder', '1/2 cup corn'],
+        steps: ['Whisk together 1 cup of mayonnaise, pepper, garlic powder, and blue cheese until combined. Combine the chicken, bacon, avacado, corn, and tomatoes in a large bowl. Pour the mayonnaise mixture over the chicken mixture and stir until evenly combined.']
     },
 
 
@@ -136,7 +139,8 @@ const restaurantMenu = [
         title:  'Fresh Garden Salad',
         price:  '9.99',
         desc:   'Tossed green salad made with carrots, tomatoes, cucumbers and onions',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['10 romaine lettuce leaves', '4 tomatoes, chopped', '1 large cucumber, sliced', '1 onion, sliced', '2 tablespoons lemon juice', '1 tablespoon extra-virgin olive oil', '1/2 cup sour cream', '1/2 cup parsley'],
+        steps: ['Toss the romaine lettuce, tomatoes, cucumber, onion, and parsley together in a large bowl; season with salt. Drizzle the lemon juice and olive oil over the salad; stir. Add the sour cream and mix until evenly coated.']
     },
 
     {
@@ -145,7 +149,8 @@ const restaurantMenu = [
         title:  'Minestrone Soup',
         price:  '9.99',
         desc:   'Italian vegetable soup filled with pasta, beans, tomatoes, and veggies, seasoned with Italian herbs.',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['1 tablespoon olive oil', '3/4 cup diced carrot', '1 cup diced onion', '1 teaspoon minced garlic', '2 cups College Inn® Chicken Broth', '3/4 cup sliced celery', '1 (15 ounce) can Contadina® Tomato Sauce', '1 (15 ounce) can cannellini beans'],
+        steps: ['Heat olive oil in a large saucepan or Dutch oven over medium-high heat. Cook onion, carrot, celery, garlic until vegetables begin to soften, about 5 minutes', 'Stir in tomato sauce, beans and 2 1/2 cups water. Add broth, pasta and pepper; bring to a simmer. Cook, uncovered, 10 minutes or until pasta is tender, stirring occasionally.']
     },
 
     {
@@ -154,7 +159,8 @@ const restaurantMenu = [
         title:  'Pasta Fagoli',
         price:  '9.99',
         desc:   'Italian style soup with tender pasta, creamy beans, and delicious herbs in a rich and savory broth.',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['1 (15 ounce) can cannellini (white kidney) beans, drained', '3 cups chopped Swiss chard', '3 cups chicken broth', '¾ cup dry elbow macaroni', '¼ cup tomato paste', '12 ounces sweet bulk Italian sausage', '3/4 cup dry elbow macaroni'],
+        steps: ['Heat oil in a skillet over medium-high heat. Brown sausage while breaking it into small pieces, about 5 minutes. Reduce heat to medium. Add diced celery and chopped onion. Cook until onions are translucent, 4 to 5 minutes. Add dry pasta. Cook and stir 2 minutes.', 'Stir in tomato paste until evenly distributed, 2 to 3 minutes. Add 3 cups broth. Raise heat to high and bring to a simmer. Add salt, black pepper, pepper flakes, and oregano. When soup comes to a boil, reduce heat to medium and let it simmer about 5 minutes, stirring often. Check soup consistency and add more broth, if needed.', 'Place chopped chard in a bowl. Cover with cold water and rinse the leaves; any grit will fall to the bottom of the bowl. Transfer chard to colander to drain briefly; add to soup. Cook and stir until leaves wilt, 2 to 3 minutes', 'Stir in white beans; continue cooking and stirring until pasta is perfectly cooked, another 4 or 5 minutes. Remove from heat and stir in grated cheese. Serve topped with grated cheese, if desired.']
     },
 
 
@@ -164,7 +170,8 @@ const restaurantMenu = [
         title:  'French Onion Soup',
         price:  '9.99',
         desc:   'French style soup prepared with beef stock, caramelized onions, topped with cheesy bread',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['6 slices French bread, toasted', '1/2 cup grated Parmesan cheese', '½ cup shredded Swiss cheese', '2 (10.5 ounce) cans beef broth', '2 tablespoons all-purpose flour', '2 onions, thinly sliced'],
+        steps: ['Preheat oven to 425 degrees F(220 degrees C). Separate sliced onion into single rings.', 'In a medium sauce pan saute onions in butter until soft, approximately 20 minutes. Stir in flour and gradually add broth and water. Bring to a boil and simmer for 20 minutes.', 'Meanwhile, toast French bread slices.', 'Place toasted bread into soup bowls. Pour soup mixture over bread and sprinkle with Parmesan and Swiss cheese. Bake for 10 minutes.']
     },
     
 
@@ -174,7 +181,8 @@ const restaurantMenu = [
         title:  'Tortellini Soup',
         price:  '9.99',
         desc:   'Creamy soup with rich cheese tortellini, ground beef, tomatoes and vegetables, and flavorful herbs.',
-        ingredients: ['', '', '', '', '', '']
+        ingredients: ['2 cans chicken broth, divided', '1 (20 ounce) package cheese tortellini', '1 small onion, chopped', '2 tablespoons Italian seasoning', '1 bunch fresh spinach, chopped', '2 tablespoons minced garlic'],
+        steps: ['Pour 1 can broth into a small saucepan and add tortellini; bring to a boil. Cook tortellini until tender yet firm to the bite, about 5 minutes.', 'Heat oil in a large stockpot over medium heat; cook and stir onion, garlic, and Italian seasoning. Add tortellini-broth mixture, remaining can of broth, and spinach; cover stockpot and simmer until flavors blend, about 30 minutes']
     },
 
  
@@ -370,7 +378,21 @@ const restaurantMenu = [
 
 ]
 
+/*async function getRecipes(){
+    const res = await fetch(`menu.json`);
 
+    const data = await res.json();
+    
+    return data;
+}
+
+
+async function showPosts(){
+    const posts = await getRecipes();
+    console.log(posts);
+}
+
+showPosts();*/
 
 const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 800
@@ -394,7 +416,9 @@ window.addEventListener('DOMContentLoaded', function(){
 
 });  
 
+//section active 
 
+const stepsSection = document.querySelector('.steps');
 //select a category
 const categories = document.querySelectorAll('.option');
 const selectedRecipeSection = document.querySelector('.selected-recipe');
@@ -411,7 +435,7 @@ categories.forEach(function(category){
         //update categorySlider
         const categorySlider = document.querySelector('.category-slider');
         for(let i = 0; i < categories.length; i++){
-            const selectedCategory = categories[i];//all of the individual indexes
+            const selectedCategory = categories[i];//get of the individual indexes
             
 
             if(e.target === selectedCategory){//if e.target = one of the indexes
@@ -462,8 +486,9 @@ const searchItems = restaurantMenu.map(recipe => `
 searchResultList.innerHTML = searchItems;
 
 const searchResults = document.querySelectorAll('.search-item');
+
 searchFilter.addEventListener('keyup', function(e){
-    const inputValue = e.target.value.toLowerCase();
+    let inputValue = e.target.value.toLowerCase();
 
     for(let i = 0; i < searchResults.length; i++){
         const match = searchResults[i].children[1].textContent;
@@ -487,7 +512,7 @@ searchFilter.addEventListener('keyup', function(e){
     searchResult.addEventListener('click', function(e){
        const selection = searchResult.children[1].textContent;
        addRecipe(selection);
-       inputValue === '';
+       console.log(inputValue);
     })
 })
 
@@ -499,10 +524,14 @@ searchFilter.addEventListener('keyup', function(e){
 searchResults.forEach(function(searchResult){
     searchResult.addEventListener('click', function(e){
        const selection = searchResult.children[1].textContent;
-       selectRecipe(selection);
+       addRecipe(selection);
        
     })
 })
+
+
+
+
 
 //multiple use functions
 
@@ -543,14 +572,16 @@ function updateDOM(array){
 
 //
 function addRecipe(element){
+    sectionActive(selectedRecipeSection);
+    sectionActive(stepsSection);
+
     for(let i = 0; i < restaurantMenu.length; i++){
         if(element === restaurantMenu[i].title){
             selectedRecipeTitle.textContent = restaurantMenu[i].title;
             selectedRecipeDesc.textContent = restaurantMenu[i].desc;
             selectedRecipeImage.src = restaurantMenu[i].image;
-            selectedRecipeSection.classList.add(restaurantMenu[i].category);
+            selectedRecipeSection.classList.add(restaurantMenu[i].category);//for coloring 
         
-            
            
 
             const ingredientsList = restaurantMenu[i].ingredients.map(ingredient => `
@@ -572,3 +603,6 @@ function addRecipe(element){
     }  
 }
 
+function sectionActive(element){
+    element.classList.add('active');
+}

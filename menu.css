@@ -41,7 +41,6 @@ body{
 
 
 .nav{
-    height: 10vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -282,14 +281,24 @@ body{
 
 
 /*selected section */
+
 .selected-recipe{
     max-width: 80%;
     min-width: 80%;
     margin: 0 auto;
-    display: flex;
+    display: none;
     flex-direction: column; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 30px;
+}
+
+.selected-recipe.active{
+    display: flex;
+}
+
+.steps.active{
+    display: flex;
+    flex-direction: column;
 }
 
 .selected-recipe i{
@@ -399,6 +408,7 @@ body{
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
+    display: none;
 }
 
 .steps h1{
@@ -406,22 +416,23 @@ body{
 }
 
 .recipe-steps li{
-    margin-bottom: 16px;
-    display: flex;
+    margin-bottom: 30px;
     padding: 10px;
-    
+    position: relative;
     background: rgb(250, 248, 241);
 
 }
 
 .step-number{
+    position: absolute;
+    top: -18px;
+    left: -18px;
     margin-right: 10px;
-    height: 30px;
-    width: 30px;
+    border-radius: 50%;
     min-height: 30px;
     min-width: 30px;
     max-height: 30px;
-    max-height: 30px;
+    max-width: 30px;
    background: rgb(241, 114, 9);
     display: flex;
     justify-content: center;
@@ -462,6 +473,25 @@ body{
      body{
          font-size: 16px;
      }
+
+     .nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 0 16px;
+    }
+
+    .search-container{
+        width: 80%;
+        border: 1px solid red;
+    }
+
+    .search-list{
+        width: 100vw;
+        left: -15%;
+    }
+
+  
 
     .menu-options{
         max-width: 90%;
@@ -510,9 +540,7 @@ body{
 
 @media(max-width: 600px){
 
-    .search-container{
-        width: 300px;
-    }
+   
     body{
         font-size: 10px;
     }

@@ -4,7 +4,7 @@ const restaurantMenu = [
         image: 'https://www.dinneratthezoo.com/wp-content/uploads/2019/12/mozzarella-sticks-4-500x500.jpg',
         title:  'Mozzerella Sticks',
         price:  '9.99',
-        desc:   'Sticks of mozzarella cheese that are coated in seasoned Italian breadcrumbs, then deep fried until golden brown',
+        desc:   'Sticks of mozzarella cheese coated in seasoned breadcrumbs, then deep fried until golden brown',
         ingredients: ['1⁄4 cup flour', '1 cup Italian style breadcrumbs', '2 eggs', '1 tablespoon milk', '1 lb mozzerella cheese', '1 cup vegetable oil', '1 cup marinara sauce'],
         steps: ['Beat the eggs in a mixing bowl. Whisk in the milk, then set aside. Place the bread crumbs into a plastic bag, and set aside', 'Separate and place an egg roll wrapper onto your work surface with one of the tips pointed towards you. Moisten the two far edges of the wrapper with water. Place a string cheese stick onto the corner nearest you, and roll it in 1/3 of the way, fold over the right and left corners, then continue rolling to the end, pressing to seal. Repeat with the remaining string cheese sticks and egg roll wrappers.', 'Heat oil in a deep-fryer or large saucepan to 375 degrees F (190 degrees C).', 'Dip the mozzarella sticks into the egg wash, then toss in the bread crumbs. Cook in batches in the hot oil until crisp and golden brown, 3 to 4 minutes.']
     },
@@ -238,7 +238,7 @@ const restaurantMenu = [
     {
         category: 'entrees',
         image: 'https://static.onecms.io/wp-content/uploads/sites/44/2019/08/26231103/5565807.jpg',
-        title:  'Maryland Style Crab Cakes',
+        title:  'Maryland Crab Cakes',
         price:  '9.99',
         desc:   'Deep fried lump crab meat topped with Old Bay seasoning, served with Honey Dijon mustard',
     },
@@ -420,7 +420,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 const stepsSection = document.querySelector('.steps');
 //select a category
-const categories = document.querySelectorAll('.option');
+const categories = document.querySelectorAll('.menu-option');
 const selectedRecipeSection = document.querySelector('.selected-recipe');
 const selectedRecipeTitle = document.querySelector('.selected-recipe-title');
 const selectedRecipeDesc = document.querySelector('.selected-recipe-desc');
@@ -431,21 +431,15 @@ const selectedRecipeSteps = document.querySelector('.recipe-steps');
 
 categories.forEach(function(category){
     category.addEventListener('click', function(e){
-       
-        //update categorySlider
-        const categorySlider = document.querySelector('.category-slider');
-        for(let i = 0; i < categories.length; i++){
-            const selectedCategory = categories[i];//get of the individual indexes
-            
+       const selected = e.currentTarget;
 
-            if(e.target === selectedCategory){//if e.target = one of the indexes
-                categorySlider.style.transform = `translateX(${i}00%)`;
-            }
-        }
-    
+       categories.forEach(category => {
+           category.classList.remove('active');
+           selected.classList.add('active');
+       })
 
        //show selected menu items based on category
-       const categoryID = e.target.getAttribute('id');
+       const categoryID = e.currentTarget.getAttribute('id');
        const categoryArray = [];
        
        for(let i = 0; i < restaurantMenu.length; i++){
@@ -463,6 +457,8 @@ categories.forEach(function(category){
        //select a recipe 
        const recipeItems = document.querySelectorAll('.recipe-item');
        selectRecipeFromMain(recipeItems);
+
+      
        
     })
 });
@@ -554,14 +550,7 @@ function updateDOM(array){
      <img class="recipe-img" src="${menuOption.image}">
      <div class="recipe-info">
          <h2 class="recipe-title">${menuOption.title}</h2>
-         <p>Recipe By: John Petran</p>
-         <div class="recipe-ratings">
-             <i class="fas fa-star"></i>
-             <i class="fas fa-star"></i>
-             <i class="fas fa-star"></i>
-             <i class="fas fa-star"></i>
-             <i class="fas fa-star-half-alt"></i>
-         </div>
+         <p>${menuOption.desc}</p>
      </div>
     </a>`).join('');
  
@@ -582,10 +571,13 @@ function addRecipe(element){
             selectedRecipeImage.src = restaurantMenu[i].image;
             selectedRecipeSection.classList.add(restaurantMenu[i].category);//for coloring 
         
-           
+            const ingredients = restaurantMenu[i].ingredients;
 
             const ingredientsList = restaurantMenu[i].ingredients.map(ingredient => `
-            <li>- ${ingredient}</li>
+            <li>
+            <span class="step-number">${ingredients.indexOf(ingredient) + 1}</span>
+            <p class="step-content">${ingredient}</p>
+            </li>
             `).join('');
 
             const steps = restaurantMenu[i].steps;
@@ -606,3 +598,4 @@ function addRecipe(element){
 function sectionActive(element){
     element.classList.add('active');
 }
+

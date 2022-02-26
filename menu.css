@@ -557,6 +557,10 @@ img{
         margin-bottom: 25px;
     }
 
+    .menu-option{
+        padding: 10px 0;
+    }
+
    .menu-options h4{
         font-size: 8px;
     }
